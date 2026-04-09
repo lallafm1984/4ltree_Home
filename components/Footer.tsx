@@ -48,7 +48,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">© 2024 4LTree. All rights reserved.</p>
+          <p className="text-sm">© 2026 4LTree. All rights reserved.</p>
           <p className="text-sm">Made with ♥ for musicians everywhere</p>
         </div>
       </div>
