@@ -13,10 +13,6 @@
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-brand-green to-brand-orange bg-clip-text text-transparent;
-  }
-
   .logo-gradient {
     background: linear-gradient(135deg, #6DBF4A 0%, #4AADD9 33%, #F5C523 66%, #F47920 100%);
   }

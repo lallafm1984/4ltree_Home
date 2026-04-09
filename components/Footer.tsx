@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">앱</h4>
             <ul className="space-y-2 text-sm">
-              {["기능 소개", "요금제", "업데이트 내역", "로드맵"].map((item) => (
+              {["기능 소개", "업데이트 내역", "로드맵"].map((item) => (
                 <li key={item}>
                   <a href="#" className="hover:text-brand-green transition-colors">{item}</a>
                 </li>

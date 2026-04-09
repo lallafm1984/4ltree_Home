@@ -26,7 +26,7 @@ export function Hero() {
             </span>
             <h1 className="font-display text-5xl md:text-6xl font-extrabold text-brand-dark leading-tight mb-6">
               귀를 훈련하고{" "}
-              <span className="text-gradient">음악 실력</span>을
+              <span className="text-brand-green">음악 실력</span>을
               <br />
               레벨업하세요
             </h1>
@@ -50,19 +50,6 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="flex gap-8">
-              {[
-                { value: "10K+", label: "활성 사용자", color: "text-brand-green" },
-                { value: "6가지", label: "훈련 카테고리", color: "text-brand-blue" },
-                { value: "4.8★", label: "앱스토어 평점", color: "text-brand-orange" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className={`font-display text-2xl font-bold ${stat.color}`}>{stat.value}</div>
-                  <div className="text-sm text-slate-500">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           {/* Right: App Mockup */}

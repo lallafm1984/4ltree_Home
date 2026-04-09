@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/Button";
 const navLinks = [
   { label: "기능", href: "#features" },
   { label: "사용법", href: "#how-it-works" },
-  { label: "요금제", href: "#pricing" },
-  { label: "후기", href: "#testimonials" },
 ];
 
 function Logo4LTree({ className = "w-8 h-8" }: { className?: string }) {
@@ -70,7 +68,7 @@ export function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button href="#pricing" size="sm">
+            <Button href="#features" size="sm">
               무료로 시작하기
             </Button>
           </div>
@@ -105,7 +103,7 @@ export function Navbar() {
               </a>
             ))}
             <div className="px-4 pt-2">
-              <Button href="#pricing" size="sm" className="w-full">
+              <Button href="#features" size="sm" className="w-full">
                 무료로 시작하기
               </Button>
             </div>

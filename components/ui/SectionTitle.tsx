@@ -16,7 +16,7 @@ export function SectionTitle({
   const titleWithHighlight = highlight
     ? title.replace(
         highlight,
-        `<span class="text-gradient">${highlight}</span>`
+        `<span class="text-brand-green">${highlight}</span>`
       )
     : title;
 
