@@ -66,13 +66,13 @@ export function Pricing() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative rounded-3xl p-8 ${
                 plan.highlighted
-                  ? "bg-gradient-to-br from-brand-indigo to-indigo-700 text-white shadow-2xl scale-105"
+                  ? "text-white shadow-2xl scale-105 logo-gradient"
                   : "bg-slate-50 border border-slate-200"
               }`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-brand-amber text-white text-sm font-bold px-4 py-1 rounded-full shadow">
+                  <span className="bg-brand-yellow text-brand-dark text-sm font-bold px-4 py-1 rounded-full shadow">
                     추천
                   </span>
                 </div>
@@ -81,21 +81,21 @@ export function Pricing() {
               <div className="mb-6">
                 <h3
                   className={`font-display text-2xl font-bold mb-1 ${
-                    plan.highlighted ? "text-white" : "text-slate-900"
+                    plan.highlighted ? "text-white" : "text-brand-dark"
                   }`}
                 >
                   {plan.name}
                 </h3>
-                <p className={`text-sm ${plan.highlighted ? "text-indigo-200" : "text-slate-500"}`}>
+                <p className={`text-sm ${plan.highlighted ? "text-white/80" : "text-slate-500"}`}>
                   {plan.description}
                 </p>
               </div>
 
               <div className="mb-6">
-                <span className={`font-display text-5xl font-extrabold ${plan.highlighted ? "text-white" : "text-slate-900"}`}>
+                <span className={`font-display text-5xl font-extrabold ${plan.highlighted ? "text-white" : "text-brand-dark"}`}>
                   ₩{plan.price}
                 </span>
-                <span className={`text-sm ml-2 ${plan.highlighted ? "text-indigo-200" : "text-slate-400"}`}>
+                <span className={`text-sm ml-2 ${plan.highlighted ? "text-white/70" : "text-slate-400"}`}>
                   {plan.period}
                 </span>
               </div>
@@ -103,10 +103,10 @@ export function Pricing() {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
-                    <svg className={`w-5 h-5 flex-shrink-0 ${plan.highlighted ? "text-indigo-200" : "text-brand-indigo"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className={`w-5 h-5 flex-shrink-0 ${plan.highlighted ? "text-white" : "text-brand-green"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className={`text-sm ${plan.highlighted ? "text-indigo-100" : "text-slate-700"}`}>
+                    <span className={`text-sm ${plan.highlighted ? "text-white/90" : "text-slate-700"}`}>
                       {feature}
                     </span>
                   </li>

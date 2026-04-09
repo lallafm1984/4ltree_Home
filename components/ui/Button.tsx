@@ -20,11 +20,11 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-brand-indigo hover:bg-brand-indigo-dark text-white focus:ring-brand-indigo shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "bg-brand-green hover:bg-brand-green-dark text-white focus:ring-brand-green shadow-lg hover:shadow-xl hover:-translate-y-0.5",
     secondary:
-      "bg-brand-amber hover:bg-brand-amber-dark text-white focus:ring-brand-amber shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "bg-brand-orange hover:bg-brand-orange-dark text-white focus:ring-brand-orange shadow-lg hover:shadow-xl hover:-translate-y-0.5",
     outline:
-      "border-2 border-brand-indigo text-brand-indigo hover:bg-brand-indigo hover:text-white focus:ring-brand-indigo",
+      "border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white focus:ring-brand-green",
   };
 
   const sizes = {

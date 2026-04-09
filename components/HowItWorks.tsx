@@ -8,19 +8,19 @@ const steps = [
     step: "01",
     title: "카테고리 선택",
     description: "멜로디, 리듬, 화음 등 오늘 훈련할 카테고리를 선택하세요. 난이도도 자유롭게 조절할 수 있습니다.",
-    color: "from-brand-indigo to-indigo-600",
+    color: "from-brand-green to-green-600",
   },
   {
     step: "02",
     title: "듣고 풀기",
     description: "음악을 듣고 정답을 입력하세요. 오선보에 음표를 그리거나, 건반을 누르거나, 선택지를 고르는 다양한 방식으로 답할 수 있습니다.",
-    color: "from-brand-amber to-amber-600",
+    color: "from-brand-blue to-blue-600",
   },
   {
     step: "03",
     title: "성장 확인",
     description: "매일 훈련 스트릭을 유지하고 통계 대시보드에서 내 실력 향상을 확인하세요. 마스코트와 함께 레벨업!",
-    color: "from-emerald-500 to-green-600",
+    color: "from-brand-orange to-orange-600",
   },
 ];
 
@@ -36,7 +36,7 @@ export function HowItWorks() {
         />
 
         <div className="relative">
-          <div className="hidden lg:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-brand-indigo via-brand-amber to-emerald-500 opacity-30" />
+          <div className="hidden lg:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-brand-green via-brand-blue to-brand-orange opacity-30" />
 
           <div className="grid lg:grid-cols-3 gap-8">
             {steps.map((item, index) => (
@@ -53,7 +53,7 @@ export function HowItWorks() {
                 >
                   <span className="font-display text-2xl font-bold text-white">{item.step}</span>
                 </div>
-                <h3 className="font-display text-xl font-bold text-slate-900 mb-3">
+                <h3 className="font-display text-xl font-bold text-brand-dark mb-3">
                   {item.title}
                 </h3>
                 <p className="text-slate-500 leading-relaxed">{item.description}</p>

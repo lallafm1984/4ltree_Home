@@ -11,6 +11,7 @@ const testimonials = [
     rating: 5,
     comment:
       "매일 30분씩 MelodyGen으로 훈련하고 나서 청음 실력이 눈에 띄게 좋아졌어요. 모의고사 기능이 실제 시험 준비에 정말 도움이 돼요.",
+    accentColor: "border-l-brand-green",
   },
   {
     name: "박민준",
@@ -19,6 +20,7 @@ const testimonials = [
     rating: 5,
     comment:
       "취미로 기타를 치면서 화음 인식이 항상 어려웠는데, 이 앱 2주 만에 확실히 달라졌습니다. 게임 요소도 있어서 매일 하게 돼요!",
+    accentColor: "border-l-brand-blue",
   },
   {
     name: "이하은",
@@ -27,6 +29,7 @@ const testimonials = [
     rating: 5,
     comment:
       "학생들에게도 추천하고 저도 쓰고 있어요. 체계적인 커리큘럼과 통계 기능이 훌륭합니다. 상대음감 훈련에 특히 효과적이에요.",
+    accentColor: "border-l-brand-orange",
   },
 ];
 
@@ -49,22 +52,22 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+              className={`bg-white rounded-2xl p-6 shadow-sm border border-slate-100 border-l-4 ${t.accentColor} hover:shadow-md transition-shadow`}
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <span key={i} className="text-brand-amber text-lg">★</span>
+                  <span key={i} className="text-brand-yellow text-lg">★</span>
                 ))}
               </div>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
                 &quot;{t.comment}&quot;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-indigo-50 rounded-full flex items-center justify-center text-xl">
+                <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center text-xl">
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900 text-sm">{t.name}</div>
+                  <div className="font-semibold text-brand-dark text-sm">{t.name}</div>
                   <div className="text-slate-400 text-xs">{t.role}</div>
                 </div>
               </div>

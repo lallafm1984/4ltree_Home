@@ -10,18 +10,23 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          indigo: "#6366f1",
-          "indigo-dark": "#4f46e5",
-          amber: "#f59e0b",
-          "amber-dark": "#d97706",
+          green: "#6DBF4A",
+          "green-dark": "#5AA63C",
+          blue: "#4AADD9",
+          "blue-dark": "#3A96C0",
+          yellow: "#F5C523",
+          "yellow-dark": "#DBA91E",
+          orange: "#F47920",
+          "orange-dark": "#D96818",
+          dark: "#4A4A4A",
         },
         category: {
-          melody: "#6366f1",
-          rhythm: "#f59e0b",
-          interval: "#10b981",
-          chord: "#a855f7",
-          key: "#ef4444",
-          "two-voice": "#06b6d4",
+          melody: "#4AADD9",
+          rhythm: "#F47920",
+          interval: "#6DBF4A",
+          chord: "#F5C523",
+          key: "#F47920",
+          "two-voice": "#4AADD9",
         },
       },
       fontFamily: {

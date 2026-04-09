@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50 to-amber-50">
+    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-green-50 via-blue-50 to-amber-50">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-indigo/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-amber/10 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -20,10 +21,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block mb-4 px-4 py-1 bg-indigo-100 text-brand-indigo text-sm font-semibold rounded-full">
+            <span className="inline-block mb-4 px-4 py-1 bg-green-100 text-brand-green text-sm font-semibold rounded-full">
               🎵 음악가를 위한 청음 훈련 앱
             </span>
-            <h1 className="font-display text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-extrabold text-brand-dark leading-tight mb-6">
               귀를 훈련하고{" "}
               <span className="text-gradient">음악 실력</span>을
               <br />
@@ -52,12 +53,12 @@ export function Hero() {
             {/* Stats */}
             <div className="flex gap-8">
               {[
-                { value: "10K+", label: "활성 사용자" },
-                { value: "6가지", label: "훈련 카테고리" },
-                { value: "4.8★", label: "앱스토어 평점" },
+                { value: "10K+", label: "활성 사용자", color: "text-brand-green" },
+                { value: "6가지", label: "훈련 카테고리", color: "text-brand-blue" },
+                { value: "4.8★", label: "앱스토어 평점", color: "text-brand-orange" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <div className="font-display text-2xl font-bold text-brand-indigo">{stat.value}</div>
+                  <div className={`font-display text-2xl font-bold ${stat.color}`}>{stat.value}</div>
                   <div className="text-sm text-slate-500">{stat.label}</div>
                 </div>
               ))}
@@ -72,8 +73,8 @@ export function Hero() {
             className="relative flex justify-center lg:justify-end"
           >
             <div className="relative w-72 h-[580px]">
-              {/* Phone frame */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-indigo to-brand-amber rounded-[3rem] shadow-2xl opacity-20 blur-xl scale-95" />
+              {/* Phone glow */}
+              <div className="absolute inset-0 rounded-[3rem] shadow-2xl opacity-20 blur-xl scale-95 logo-gradient" />
               <div className="relative w-full h-full bg-slate-900 rounded-[3rem] overflow-hidden border-4 border-slate-800 shadow-2xl">
                 {/* Status bar */}
                 <div className="flex justify-between items-center px-6 py-3 bg-slate-900">
@@ -87,14 +88,14 @@ export function Hero() {
                 <div className="px-4 py-4 bg-white h-full">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <div className="font-bold text-slate-900 text-sm">안녕하세요! 👋</div>
-                      <div className="text-brand-indigo font-semibold text-xs">오늘도 훈련해볼까요?</div>
+                      <div className="font-bold text-brand-dark text-sm">안녕하세요! 👋</div>
+                      <div className="text-brand-green font-semibold text-xs">오늘도 훈련해볼까요?</div>
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-indigo to-brand-amber" />
+                    <div className="w-10 h-10 rounded-full logo-gradient" />
                   </div>
                   {/* Daily goal card */}
-                  <div className="bg-gradient-to-r from-brand-indigo to-indigo-600 rounded-2xl p-4 mb-4 text-white">
-                    <div className="text-xs opacity-80 mb-1">오늘의 목표</div>
+                  <div className="rounded-2xl p-4 mb-4 text-white logo-gradient">
+                    <div className="text-xs opacity-90 mb-1">오늘의 목표</div>
                     <div className="font-bold text-lg mb-2">3/5 완료</div>
                     <div className="w-full bg-white/30 rounded-full h-2">
                       <div className="bg-white rounded-full h-2 w-3/5" />
@@ -103,12 +104,12 @@ export function Hero() {
                   {/* Category cards */}
                   <div className="grid grid-cols-2 gap-2">
                     {[
-                      { name: "멜로디", color: "bg-indigo-100", text: "text-category-melody" },
-                      { name: "리듬", color: "bg-amber-100", text: "text-category-rhythm" },
-                      { name: "음정", color: "bg-emerald-100", text: "text-category-interval" },
-                      { name: "화음", color: "bg-purple-100", text: "text-category-chord" },
+                      { name: "멜로디", bg: "bg-blue-100", text: "text-brand-blue" },
+                      { name: "리듬", bg: "bg-orange-100", text: "text-brand-orange" },
+                      { name: "음정", bg: "bg-green-100", text: "text-brand-green" },
+                      { name: "화음", bg: "bg-yellow-100", text: "text-brand-yellow" },
                     ].map((cat) => (
-                      <div key={cat.name} className={`${cat.color} rounded-xl p-3`}>
+                      <div key={cat.name} className={`${cat.bg} rounded-xl p-3`}>
                         <div className={`${cat.text} font-bold text-sm`}>{cat.name}</div>
                         <div className="text-slate-400 text-xs mt-1">훈련 시작 →</div>
                       </div>

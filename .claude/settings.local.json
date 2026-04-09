@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"D:/Projects/YulProject_1/nextjs-temp/package.json\" \"D:/Projects/YulProject_1/4ltree_home/\")",
+      "Bash(cp \"D:/Projects/YulProject_1/nextjs-temp/package-lock.json\" \"D:/Projects/YulProject_1/4ltree_home/\")",
+      "Bash(cp \"D:/Projects/YulProject_1/nextjs-temp/postcss.config.mjs\" \"D:/Projects/YulProject_1/4ltree_home/\")",
+      "Bash(cp \"D:/Projects/YulProject_1/nextjs-temp/README.md\" \"D:/Projects/YulProject_1/4ltree_home/\")",
+      "Bash(cp \"D:/Projects/YulProject_1/nextjs-temp/tsconfig.json\" \"D:/Projects/YulProject_1/4ltree_home/\")",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

@@ -23,12 +23,12 @@ export function SectionTitle({
   return (
     <div className={`mb-12 ${center ? "text-center" : ""}`}>
       {badge && (
-        <span className="inline-block mb-3 px-4 py-1 bg-indigo-50 text-brand-indigo text-sm font-semibold rounded-full">
+        <span className="inline-block mb-3 px-4 py-1 bg-green-50 text-brand-green text-sm font-semibold rounded-full">
           {badge}
         </span>
       )}
       <h2
-        className="font-display text-3xl md:text-4xl font-bold text-slate-900 leading-tight"
+        className="font-display text-3xl md:text-4xl font-bold text-brand-dark leading-tight"
         dangerouslySetInnerHTML={{ __html: titleWithHighlight }}
       />
       {subtitle && (

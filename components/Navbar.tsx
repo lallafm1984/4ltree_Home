@@ -10,6 +10,25 @@ const navLinks = [
   { label: "후기", href: "#testimonials" },
 ];
 
+function Logo4LTree({ className = "w-8 h-8" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Green L - bottom left */}
+      <rect x="2" y="42" width="11" height="36" rx="3" fill="#6DBF4A"/>
+      <rect x="2" y="67" width="30" height="11" rx="3" fill="#6DBF4A"/>
+      {/* Blue L */}
+      <rect x="18" y="28" width="11" height="36" rx="3" fill="#4AADD9"/>
+      <rect x="18" y="53" width="30" height="11" rx="3" fill="#4AADD9"/>
+      {/* Yellow L */}
+      <rect x="34" y="14" width="11" height="36" rx="3" fill="#F5C523"/>
+      <rect x="34" y="39" width="30" height="11" rx="3" fill="#F5C523"/>
+      {/* Orange L - top right, slightly rotated effect via transform */}
+      <rect x="52" y="2" width="11" height="30" rx="3" fill="#F47920" transform="rotate(15 57 17)"/>
+      <rect x="50" y="26" width="28" height="11" rx="3" fill="#F47920" transform="rotate(15 64 31)"/>
+    </svg>
+  );
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,9 +49,9 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-brand-indigo to-brand-amber rounded-lg" />
-            <span className="font-display text-xl font-bold text-slate-900">
-              4LTree
+            <Logo4LTree className="w-9 h-9" />
+            <span className="font-display text-xl font-bold text-brand-dark">
+              4L TREE
             </span>
           </a>
 
@@ -42,7 +61,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-600 hover:text-brand-indigo font-medium transition-colors"
+                className="text-slate-600 hover:text-brand-green font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -80,7 +99,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block px-4 py-3 text-slate-600 hover:text-brand-indigo font-medium"
+                className="block px-4 py-3 text-slate-600 hover:text-brand-green font-medium"
               >
                 {link.label}
               </a>
