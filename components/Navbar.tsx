@@ -60,7 +60,7 @@ export function Navbar() {
           <button
             className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="메뉴 열기"
+            aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {menuOpen ? (
