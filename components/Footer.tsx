@@ -67,8 +67,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-zinc-400 text-sm">© 2026 4L TREE. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="#" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</a>
-            <a href="#" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</a>
+            <a href="/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</a>
+            <a href="/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</a>
           </div>
         </div>
       </div>
