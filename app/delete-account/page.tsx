@@ -60,7 +60,7 @@ export default function DeleteAccountPage() {
           </div>
           <ol className="space-y-2 text-sm text-zinc-600 pl-10">
             <li className="flex gap-2"><span className="font-semibold text-zinc-400 w-4 shrink-0">①</span>MelodyGen 앱 실행</li>
-            <li className="flex gap-2"><span className="font-semibold text-zinc-400 w-4 shrink-0">②</span>하단 탭 → <strong className="text-zinc-700">프로필</strong> 화면으로 이동</li>
+            <li className="flex gap-2"><span className="font-semibold text-zinc-400 w-4 shrink-0">②</span><strong className="text-zinc-700">프로필</strong> 화면으로 이동</li>
             <li className="flex gap-2"><span className="font-semibold text-zinc-400 w-4 shrink-0">③</span><strong className="text-zinc-700">계정 삭제(회원 탈퇴)</strong> 버튼 탭</li>
             <li className="flex gap-2"><span className="font-semibold text-zinc-400 w-4 shrink-0">④</span>안내에 따라 삭제 확인 → 즉시 처리</li>
           </ol>
