@@ -18,20 +18,16 @@ const config: Config = {
           "yellow-dark": "#DBA91E",
           orange: "#F47920",
           "orange-dark": "#D96818",
-          dark: "#4A4A4A",
-        },
-        category: {
-          melody: "#4AADD9",
-          rhythm: "#F47920",
-          interval: "#6DBF4A",
-          chord: "#F5C523",
-          key: "#F47920",
-          "two-voice": "#4AADD9",
+          dark: "#0a0a0b",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        display: ["var(--font-poppins)", "sans-serif"],
+        sans: ["Pretendard", "system-ui", "-apple-system", "sans-serif"],
+        display: ["Pretendard", "system-ui", "-apple-system", "sans-serif"],
+      },
+      backgroundImage: {
+        "logo-gradient":
+          "linear-gradient(135deg, #6DBF4A 0%, #4AADD9 33%, #F5C523 66%, #F47920 100%)",
       },
     },
   },

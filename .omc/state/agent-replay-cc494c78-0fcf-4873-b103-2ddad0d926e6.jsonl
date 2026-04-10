@@ -32,3 +32,4 @@
 {"t":0,"agent":"a7d9cc1","agent_type":"code-reviewer","event":"agent_start","parent_mode":"none"}
 {"t":0,"agent":"a7d9cc1","agent_type":"code-reviewer","event":"agent_stop","success":true,"duration_ms":17112}
 {"t":0,"agent":"a0d900f","agent_type":"executor","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a0d900f","agent_type":"executor","event":"agent_stop","success":true,"duration_ms":225733}

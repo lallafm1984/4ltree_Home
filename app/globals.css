@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,16 +10,44 @@
   }
 
   body {
-    @apply bg-white text-brand-dark antialiased;
+    @apply bg-white text-zinc-900 antialiased;
+    font-family: 'Pretendard', system-ui, -apple-system, sans-serif;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-green to-brand-orange bg-clip-text text-transparent;
+    background: linear-gradient(90deg, #6DBF4A 0%, #4AADD9 50%, #F47920 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .logo-gradient {
     background: linear-gradient(135deg, #6DBF4A 0%, #4AADD9 33%, #F5C523 66%, #F47920 100%);
   }
+
+  .break-keep-all {
+    word-break: keep-all;
+  }
+
+  .surface-card {
+    background: #ffffff;
+    border: 1px solid #e4e4e7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }

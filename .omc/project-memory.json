@@ -1,0 +1,244 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775781672525,
+  "projectRoot": "D:\\Projects\\YulProject_1\\4ltree_home",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "16.2.3",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "19.2.4",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.4",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "eslint"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "components",
+      "docs",
+      "public"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 4,
+      "lastAccessed": 1775781672498,
+      "keyFiles": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ]
+    },
+    "components": {
+      "path": "components",
+      "purpose": "UI components",
+      "fileCount": 7,
+      "lastAccessed": 1775781672498,
+      "keyFiles": [
+        "Features.tsx",
+        "Footer.tsx",
+        "Hero.tsx",
+        "HowItWorks.tsx",
+        "Navbar.tsx"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1775781672507,
+      "keyFiles": []
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 5,
+      "lastAccessed": 1775781672508,
+      "keyFiles": [
+        "file.svg",
+        "globe.svg",
+        "next.svg",
+        "vercel.svg",
+        "window.svg"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "components\\Features.tsx",
+      "accessCount": 15,
+      "lastAccessed": 1775788630947,
+      "type": "file"
+    },
+    {
+      "path": "components\\HowItWorks.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775787696034,
+      "type": "file"
+    },
+    {
+      "path": "components\\Pricing.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775787701214,
+      "type": "file"
+    },
+    {
+      "path": "components\\Navbar.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775787621083,
+      "type": "file"
+    },
+    {
+      "path": "components\\Hero.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775787710585,
+      "type": "file"
+    },
+    {
+      "path": "components\\Footer.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775787732006,
+      "type": "file"
+    },
+    {
+      "path": "app\\globals.css",
+      "accessCount": 3,
+      "lastAccessed": 1775784107214,
+      "type": "file"
+    },
+    {
+      "path": "components\\Testimonials.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775784330685,
+      "type": "file"
+    },
+    {
+      "path": "tailwind.config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775782163291,
+      "type": "file"
+    },
+    {
+      "path": "app\\layout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775782169495,
+      "type": "file"
+    },
+    {
+      "path": "app\\page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775785603405,
+      "type": "file"
+    },
+    {
+      "path": "components\\Contact.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775787702096,
+      "type": "file"
+    },
+    {
+      "path": ".claude\\skills\\supanova-design-skill\\taste-skill\\SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1775781978571,
+      "type": "file"
+    },
+    {
+      "path": "app",
+      "accessCount": 1,
+      "lastAccessed": 1775781978761,
+      "type": "directory"
+    },
+    {
+      "path": "components",
+      "accessCount": 1,
+      "lastAccessed": 1775781983197,
+      "type": "directory"
+    },
+    {
+      "path": "components\\ui\\Button.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775781993373,
+      "type": "file"
+    },
+    {
+      "path": "components\\ui\\SectionTitle.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775781993526,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1775781996547,
+      "type": "directory"
+    },
+    {
+      "path": "public\\img",
+      "accessCount": 1,
+      "lastAccessed": 1775784067977,
+      "type": "directory"
+    },
+    {
+      "path": "public\\img\\plans.webp",
+      "accessCount": 1,
+      "lastAccessed": 1775784955931,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
