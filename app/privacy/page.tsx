@@ -129,7 +129,13 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>개인정보 열람</strong>: 앱 내 프로필 화면에서 확인</li>
               <li><strong>개인정보 수정</strong>: 표시 이름 변경</li>
-              <li><strong>계정 삭제(회원 탈퇴)</strong>: 앱 내 프로필 화면에서 삭제</li>
+              <li>
+                <strong>계정 삭제(회원 탈퇴)</strong>: 앱 내 프로필 화면에서 삭제 또는{" "}
+                <Link href="/delete-account" className="text-[#6DBF4A] hover:underline">
+                  계정 삭제 요청 페이지
+                </Link>
+                에서 신청
+              </li>
               <li><strong>동의 철회</strong>: 회원 탈퇴로 동의 철회</li>
             </ul>
           </Section>
