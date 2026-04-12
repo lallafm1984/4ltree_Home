@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useI18n, getLocalizedImage } from "@/lib/i18n";
 
-const features = [
+const featureKeys = [
   {
     id: "melody",
-    name: "멜로디 받아쓰기",
-    description: "들리는 멜로디를 악보로 옮겨보세요. 단계별 난이도(Lv.1~9)로 초보부터 고급까지 체계적으로 실력을 쌓습니다.",
+    nameKey: "features.melody.name",
+    descKey: "features.melody.desc",
     accent: "#4AADD9",
     img: "/img/melody.webp",
     icon: (
@@ -19,8 +20,8 @@ const features = [
   },
   {
     id: "rhythm",
-    name: "리듬 훈련",
-    description: "복잡한 리듬 패턴을 귀로 파악하고 정확히 기보하는 능력을 기릅니다. (Lv.1~6)",
+    nameKey: "features.rhythm.name",
+    descKey: "features.rhythm.desc",
     accent: "#F47920",
     img: "/img/rhythm.webp",
     icon: (
@@ -31,8 +32,8 @@ const features = [
   },
   {
     id: "interval",
-    name: "음정 식별",
-    description: "두 음 사이 간격을 즉각 식별하는 훈련. 음악적 귀를 날카롭게 다듬습니다. (Lv.1~4)",
+    nameKey: "features.interval.name",
+    descKey: "features.interval.desc",
     accent: "#6DBF4A",
     img: "/img/intervals.webp",
     icon: (
@@ -43,8 +44,8 @@ const features = [
   },
   {
     id: "chord",
-    name: "화음 인식",
-    description: "장조, 단조, 7화음 등 다양한 화성을 귀로 구분하는 능력을 훈련합니다. (Lv.1~4)",
+    nameKey: "features.chord.name",
+    descKey: "features.chord.desc",
     accent: "#F5C523",
     img: "/img/chords.webp",
     icon: (
@@ -55,8 +56,8 @@ const features = [
   },
   {
     id: "key",
-    name: "조성 탐지",
-    description: "음악을 듣고 어떤 조성인지 파악하세요. 절대음감과 상대음감 모두 훈련 가능. (Lv.1~3)",
+    nameKey: "features.key.name",
+    descKey: "features.key.desc",
     accent: "#F47920",
     img: "/img/keys.webp",
     icon: (
@@ -67,8 +68,8 @@ const features = [
   },
   {
     id: "two-voice",
-    name: "2성부 악보",
-    description: "두 파트가 동시에 연주되는 음악을 듣고 각 성부를 독립적으로 기보합니다. (Pro 전용, Lv.1~4)",
+    nameKey: "features.twoVoice.name",
+    descKey: "features.twoVoice.desc",
     accent: "#4AADD9",
     img: "/img/twopart.webp",
     icon: (
@@ -83,6 +84,7 @@ const CARD_W = 290;
 const CARD_H = 520;
 
 export function Features() {
+  const { locale, t } = useI18n();
   const [current, setCurrent] = useState(0);
   const [dir, setDir] = useState(1);
 
@@ -90,10 +92,10 @@ export function Features() {
     setDir(idx > current ? 1 : -1);
     setCurrent(idx);
   };
-  const prev = () => go((current - 1 + features.length) % features.length);
-  const next = () => go((current + 1) % features.length);
+  const prev = () => go((current - 1 + featureKeys.length) % featureKeys.length);
+  const next = () => go((current + 1) % featureKeys.length);
 
-  const feature = features[current];
+  const feature = featureKeys[current];
 
   return (
     <section id="features" className="py-28 bg-zinc-50">
@@ -111,16 +113,16 @@ export function Features() {
             className="inline-block mb-3 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase"
             style={{ background: "#4AADD915", color: "#4AADD9" }}
           >
-            핵심 기능
+            {t("features.badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 tracking-tight leading-tight break-keep-all">
-            6가지 청음 훈련으로
+            {t("features.title1")}
             <br />
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(90deg, #6DBF4A 0%, #4AADD9 100%)" }}
             >
-              체계적으로 성장하세요
+              {t("features.title2")}
             </span>
           </h2>
         </motion.div>
@@ -128,17 +130,16 @@ export function Features() {
         {/* Two-column layout: image carousel left, text right */}
         <div className="grid md:grid-cols-[auto_1fr] gap-10 xl:gap-16 items-center max-w-4xl mx-auto">
 
-          {/* ── Image carousel ── */}
+          {/* Image carousel */}
           <div
             className="flex justify-center"
             style={{ paddingRight: "24px", paddingBottom: "12px" }}
           >
-            {/* Pile wrapper — positions background cards + active card */}
             <div className="relative" style={{ width: CARD_W, height: CARD_H }}>
 
-              {/* Background pile cards (peek behind) */}
+              {/* Background pile cards */}
               {[2, 1].map((offset) => {
-                const idx = (current + offset) % features.length;
+                const idx = (current + offset) % featureKeys.length;
                 return (
                   <div
                     key={`pile-${offset}`}
@@ -150,7 +151,7 @@ export function Features() {
                     }}
                   >
                     <Image
-                      src={features[idx].img}
+                      src={getLocalizedImage(featureKeys[idx].img, locale)}
                       fill
                       alt=""
                       className="object-contain p-4"
@@ -160,7 +161,7 @@ export function Features() {
                 );
               })}
 
-              {/* Active card with sliding image */}
+              {/* Active card */}
               <div
                 className="absolute inset-0 rounded-3xl overflow-hidden bg-white border border-zinc-200 shadow-xl"
                 style={{ zIndex: 10 }}
@@ -184,14 +185,14 @@ export function Features() {
                     {feature.id === "two-voice" && (
                       <div className="absolute top-4 left-4 z-10">
                         <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-[#4AADD9] text-white shadow">
-                          Pro 전용
+                          {t("features.proOnly")}
                         </span>
                       </div>
                     )}
                     <Image
-                      src={feature.img}
+                      src={getLocalizedImage(feature.img, locale)}
                       fill
-                      alt={feature.name}
+                      alt={t(feature.nameKey)}
                       className="object-contain p-4"
                       sizes={`${CARD_W}px`}
                     />
@@ -201,10 +202,8 @@ export function Features() {
             </div>
           </div>
 
-          {/* ── Text panel ── */}
+          {/* Text panel */}
           <div className="flex flex-col justify-center">
-
-            {/* Animated text content */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
@@ -214,7 +213,7 @@ export function Features() {
                 transition={{ duration: 0.28, ease: "easeOut" }}
               >
                 <p className="text-xs font-bold text-zinc-400 tracking-widest uppercase mb-5">
-                  {String(current + 1).padStart(2, "0")} / {String(features.length).padStart(2, "0")}
+                  {String(current + 1).padStart(2, "0")} / {String(featureKeys.length).padStart(2, "0")}
                 </p>
 
                 <div className="flex items-center gap-3 mb-4">
@@ -225,12 +224,12 @@ export function Features() {
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-zinc-900 break-keep-all">
-                    {feature.name}
+                    {t(feature.nameKey)}
                   </h3>
                 </div>
 
                 <p className="text-zinc-500 text-base md:text-lg leading-relaxed break-keep-all">
-                  {feature.description}
+                  {t(feature.descKey)}
                 </p>
               </motion.div>
             </AnimatePresence>
@@ -260,7 +259,7 @@ export function Features() {
 
               {/* Dot indicators */}
               <div className="flex gap-1.5 ml-1">
-                {features.map((_, dotIdx) => (
+                {featureKeys.map((_, dotIdx) => (
                   <button
                     key={dotIdx}
                     onClick={() => go(dotIdx)}

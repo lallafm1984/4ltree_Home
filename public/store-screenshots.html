@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MelodyGen - Play Store Screenshots</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              deep: '#0c0f1a',
+              navy: '#111631',
+              surface: '#181d3a',
+              accent: '#f59e0b',
+              accentLight: '#fbbf24',
+              blue: '#6366f1',
+              blueLight: '#818cf8',
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #080a12;
+      font-family: 'Pretendard', system-ui, sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px;
+      justify-content: center;
+    }
+
+    .slide {
+      width: 360px;
+      height: 640px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+
+    /* Print / export at actual resolution */
+    @media print {
+      body { background: white; gap: 0; padding: 0; }
+      .slide {
+        width: 1080px;
+        height: 1920px;
+        border-radius: 0;
+        page-break-after: always;
+      }
+    }
+
+    .noise-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 50;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    .phone-frame {
+      border-radius: 24px;
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,0.08),
+        0 25px 50px -12px rgba(0,0,0,0.5),
+        0 0 80px -20px rgba(99,102,241,0.15);
+      overflow: hidden;
+    }
+
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.7; }
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .float-slow { }
+    .float-medium { }
+    .float-fast { }
+
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ef4444 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.8);
+    }
+
+    .slide-number {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SLIDE 1: Hero ==================== -->
+  <div class="slide" style="background: linear-gradient(165deg, #0c0f1a 0%, #111631 40%, #1a1040 70%, #0c0f1a 100%);">
+    <div class="noise-overlay"></div>
+    <span class="slide-number">1/5</span>
+
+    <!-- Decorative orbs -->
+    <div class="glow-orb" style="width: 200px; height: 200px; background: rgba(99,102,241,0.2); top: -40px; right: -60px;"></div>
+    <div class="glow-orb" style="width: 160px; height: 160px; background: rgba(245,158,11,0.15); bottom: 80px; left: -40px; animation-delay: 2s;"></div>
+
+    <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 28px 32px;">
+
+      <!-- Logo area -->
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+        <img src="/img/logo.jpg" alt="4L Tree" style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+        <span style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 500; letter-spacing: 0.06em;">4L TREE</span>
+      </div>
+
+      <!-- Main headline -->
+      <div style="margin-top: 20px; word-break: keep-all;">
+        <h1 style="font-size: 38px; font-weight: 800; line-height: 1.2; color: #fff; letter-spacing: -0.02em;">
+          음악의 귀를<br>
+          <span class="gradient-text">열다</span>
+        </h1>
+        <p style="margin-top: 16px; font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.6; font-weight: 400; max-width: 260px;">
+          구글 계정 하나로 시작하는<br>나만의 청음 훈련
+        </p>
+      </div>
+
+      <!-- App name badge -->
+      <div style="margin-top: 20px;">
+        <div class="badge" style="background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.2); color: #fbbf24;">
+          <iconify-icon icon="solar:music-notes-bold" style="font-size: 14px;"></iconify-icon>
+          MelodyGen
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div style="flex: 1; display: flex; align-items: flex-end; justify-content: center; margin-top: 16px;">
+        <div class="phone-frame float-slow" style="width: 220px; height: 380px; position: relative;">
+          <img src="/img/main.webp" alt="MelodyGen 메인 화면" style="object-position: top;">
+          <!-- Glass reflection -->
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 50%); pointer-events: none;"></div>
+        </div>
+      </div>
+
+      <!-- Bottom CTA hint -->
+      <div style="text-align: center; margin-top: 12px;">
+        <p style="font-size: 13px; color: rgba(255,255,255,0.3); font-weight: 500;">3초 만에 시작하기</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 2: 6 Categories ==================== -->
+  <div class="slide" style="background: linear-gradient(175deg, #0c0f1a 0%, #0f1328 50%, #12162e 100%);">
+    <div class="noise-overlay"></div>
+    <span class="slide-number">2/5</span>
+
+    <div class="glow-orb" style="width: 180px; height: 180px; background: rgba(16,185,129,0.12); top: 60px; left: -50px;"></div>
+    <div class="glow-orb" style="width: 140px; height: 140px; background: rgba(245,158,11,0.1); bottom: 200px; right: -40px; animation-delay: 1.5s;"></div>
+
+    <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 24px 28px;">
+
+      <!-- Section badge -->
+      <div class="badge" style="background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: #818cf8; align-self: flex-start;">
+        <iconify-icon icon="solar:widget-5-bold" style="font-size: 13px;"></iconify-icon>
+        6가지 훈련
+      </div>
+
+      <!-- Headline -->
+      <h2 style="margin-top: 18px; font-size: 30px; font-weight: 800; color: #fff; line-height: 1.25; letter-spacing: -0.02em; word-break: keep-all;">
+        체계적인 청음 훈련,<br>
+        <span class="gradient-text">한 앱에 모두</span>
+      </h2>
+
+      <!-- Category screenshot -->
+      <div style="margin-top: 20px; display: flex; justify-content: center;">
+        <div class="phone-frame float-slow" style="width: 260px; height: 260px; border-radius: 20px;">
+          <img src="/img/category.webp" alt="청음 훈련 유형" style="object-fit: cover;">
+        </div>
+      </div>
+
+      <!-- Category pills grid -->
+      <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div class="feature-pill" style="border-color: rgba(99,102,241,0.2); background: rgba(99,102,241,0.06);">
+          <iconify-icon icon="solar:music-note-2-bold" style="color: #818cf8; font-size: 15px;"></iconify-icon>
+          선율 받아쓰기
+        </div>
+        <div class="feature-pill" style="border-color: rgba(245,158,11,0.2); background: rgba(245,158,11,0.06);">
+          <iconify-icon icon="solar:sledgehammer-bold" style="color: #fbbf24; font-size: 15px;"></iconify-icon>
+          리듬 받아쓰기
+        </div>
+        <div class="feature-pill" style="border-color: rgba(16,185,129,0.2); background: rgba(16,185,129,0.06);">
+          <iconify-icon icon="solar:transfer-vertical-bold" style="color: #34d399; font-size: 15px;"></iconify-icon>
+          음정 듣기
+        </div>
+        <div class="feature-pill" style="border-color: rgba(168,85,247,0.2); background: rgba(168,85,247,0.06);">
+          <iconify-icon icon="solar:layers-bold" style="color: #a855f7; font-size: 15px;"></iconify-icon>
+          화성 듣기
+        </div>
+        <div class="feature-pill" style="border-color: rgba(244,63,94,0.2); background: rgba(244,63,94,0.06);">
+          <iconify-icon icon="solar:key-bold" style="color: #fb7185; font-size: 15px;"></iconify-icon>
+          조성 판별
+        </div>
+        <div class="feature-pill" style="border-color: rgba(6,182,212,0.2); background: rgba(6,182,212,0.06);">
+          <iconify-icon icon="solar:document-medicine-bold" style="color: #22d3ee; font-size: 15px;"></iconify-icon>
+          2성부 받아쓰기
+        </div>
+      </div>
+
+      <!-- Bottom tagline -->
+      <div style="margin-top: auto; text-align: center;">
+        <p style="font-size: 13px; color: rgba(255,255,255,0.35); font-weight: 400; line-height: 1.5; word-break: keep-all;">
+          초급부터 고급까지, 단계별로 설계된 커리큘럼
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 3: Melody + Rhythm Practice ==================== -->
+  <div class="slide" style="background: linear-gradient(170deg, #0c0f1a 0%, #111631 45%, #0f1a2e 100%);">
+    <div class="noise-overlay"></div>
+    <span class="slide-number">3/5</span>
+
+    <div class="glow-orb" style="width: 200px; height: 200px; background: rgba(99,102,241,0.15); bottom: 100px; left: -60px;"></div>
+    <div class="glow-orb" style="width: 150px; height: 150px; background: rgba(245,158,11,0.12); top: 40px; right: -50px; animation-delay: 1s;"></div>
+
+    <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px 24px 28px;">
+
+      <div class="badge" style="background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: #818cf8; align-self: flex-start;">
+        <iconify-icon icon="solar:pen-new-round-bold" style="font-size: 13px;"></iconify-icon>
+        실전 기보 연습
+      </div>
+
+      <h2 style="margin-top: 18px; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.3; letter-spacing: -0.02em; word-break: keep-all;">
+        듣고, 쓰고,<br>
+        <span class="gradient-text">비교하세요</span>
+      </h2>
+      <p style="margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.5; word-break: keep-all;">
+        피아노 건반과 음표 도구로<br>실제 악보에 직접 기보하는 진짜 청음 훈련
+      </p>
+
+      <!-- Two phone mockups side by side, slightly overlapping -->
+      <div style="flex: 1; display: flex; align-items: flex-start; justify-content: center; position: relative; margin-top: 10px;">
+
+        <!-- Melody screenshot (back, left) -->
+        <div class="phone-frame float-slow" style="width: 170px; height: 310px; position: absolute; left: 8px; top: 10px; transform: rotate(-3deg); z-index: 1;">
+          <img src="/img/melody.webp" alt="선율 받아쓰기" style="object-position: top;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 40%); pointer-events: none;"></div>
+        </div>
+
+        <!-- Rhythm screenshot (front, right) -->
+        <div class="phone-frame float-medium" style="width: 185px; height: 330px; position: absolute; right: 8px; top: 0; transform: rotate(2deg); z-index: 2;">
+          <img src="/img/rhythm.webp" alt="리듬 받아쓰기" style="object-position: top;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 40%); pointer-events: none;"></div>
+        </div>
+      </div>
+
+      <!-- Feature highlights -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 0;">
+        <div class="feature-pill" style="font-size: 11px; padding: 6px 12px;">
+          <iconify-icon icon="solar:music-note-2-bold" style="color: #818cf8; font-size: 13px;"></iconify-icon>
+          선율 9단계
+        </div>
+        <div class="feature-pill" style="font-size: 11px; padding: 6px 12px;">
+          <iconify-icon icon="solar:sledgehammer-bold" style="color: #fbbf24; font-size: 13px;"></iconify-icon>
+          리듬 6단계
+        </div>
+        <div class="feature-pill" style="font-size: 11px; padding: 6px 12px;">
+          <iconify-icon icon="solar:keyboard-bold" style="color: #34d399; font-size: 13px;"></iconify-icon>
+          피아노 건반
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 4: Daily Goal + Stats ==================== -->
+  <div class="slide" style="background: linear-gradient(165deg, #0c0f1a 0%, #10152a 40%, #131830 100%);">
+    <div class="noise-overlay"></div>
+    <span class="slide-number">4/5</span>
+
+    <div class="glow-orb" style="width: 180px; height: 180px; background: rgba(245,158,11,0.12); top: 80px; right: -50px;"></div>
+    <div class="glow-orb" style="width: 160px; height: 160px; background: rgba(16,185,129,0.1); bottom: 60px; left: -40px; animation-delay: 2s;"></div>
+
+    <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 24px 28px;">
+
+      <div class="badge" style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); color: #fbbf24; align-self: flex-start;">
+        <iconify-icon icon="solar:chart-2-bold" style="font-size: 13px;"></iconify-icon>
+        성장 트래킹
+      </div>
+
+      <h2 style="margin-top: 18px; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.3; letter-spacing: -0.02em; word-break: keep-all;">
+        하루 5분,<br>
+        <span class="gradient-text">꾸준함이 실력이 됩니다</span>
+      </h2>
+
+      <!-- Two screenshots stacked/overlapping -->
+      <div style="flex: 1; display: flex; align-items: flex-start; justify-content: center; position: relative; margin-top: 16px;">
+
+        <!-- Daily goal (left, tilted) -->
+        <div class="phone-frame float-medium" style="width: 165px; height: 300px; position: absolute; left: 4px; top: 10px; transform: rotate(-2deg); z-index: 2;">
+          <img src="/img/daily.webp" alt="오늘의 목표" style="object-position: top;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 40%); pointer-events: none;"></div>
+        </div>
+
+        <!-- Stats (right, tilted) -->
+        <div class="phone-frame float-slow" style="width: 165px; height: 300px; position: absolute; right: 4px; top: 20px; transform: rotate(2deg); z-index: 1;">
+          <img src="/img/stats.webp" alt="학습 통계" style="object-position: top;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 40%); pointer-events: none;"></div>
+        </div>
+      </div>
+
+      <!-- Metric pills -->
+      <div style="display: flex; gap: 10px; justify-content: center; margin-top: 12px;">
+        <div style="text-align: center; padding: 10px 16px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);">
+          <div style="font-size: 22px; font-weight: 800; color: #fbbf24;">5</div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px;">일일 목표</div>
+        </div>
+        <div style="text-align: center; padding: 10px 16px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);">
+          <div style="font-size: 22px; font-weight: 800; color: #818cf8;">
+            <iconify-icon icon="solar:calendar-bold" style="font-size: 20px;"></iconify-icon>
+          </div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px;">연습 캘린더</div>
+        </div>
+        <div style="text-align: center; padding: 10px 16px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);">
+          <div style="font-size: 22px; font-weight: 800; color: #34d399;">
+            <iconify-icon icon="solar:graph-up-bold" style="font-size: 20px;"></iconify-icon>
+          </div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px;">점수 추이</div>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.3); word-break: keep-all;">
+        연습 캘린더, 점수 차트, 스킬 프로필까지 한눈에
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 5: Mock Exam + CTA ==================== -->
+  <div class="slide" style="background: linear-gradient(170deg, #0c0f1a 0%, #131025 40%, #1a0f28 65%, #0c0f1a 100%);">
+    <div class="noise-overlay"></div>
+    <span class="slide-number">5/5</span>
+
+    <div class="glow-orb" style="width: 220px; height: 220px; background: rgba(245,158,11,0.12); top: -30px; left: -60px;"></div>
+    <div class="glow-orb" style="width: 180px; height: 180px; background: rgba(99,102,241,0.12); bottom: 40px; right: -50px; animation-delay: 1.5s;"></div>
+
+    <div style="position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; padding: 40px 24px 28px;">
+
+      <div class="badge" style="background: rgba(244,63,94,0.1); border: 1px solid rgba(244,63,94,0.2); color: #fb7185; align-self: flex-start;">
+        <iconify-icon icon="solar:diploma-bold" style="font-size: 13px;"></iconify-icon>
+        모의시험
+      </div>
+
+      <h2 style="margin-top: 18px; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.3; letter-spacing: -0.02em; word-break: keep-all;">
+        실전처럼,<br>
+        <span class="gradient-text">모의시험으로 점검</span>
+      </h2>
+      <p style="margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.5; word-break: keep-all;">
+        기초 종합부터 고급 실전까지<br>5가지 프리셋으로 실력 평가
+      </p>
+
+      <!-- Exam screenshot centered -->
+      <div style="flex: 1; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 24px; margin-top: 16px;">
+        <div class="phone-frame float-slow" style="width: 230px; height: 390px;">
+          <img src="/img/exam.webp" alt="모의시험" style="object-position: top;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 40%); pointer-events: none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useI18n, Locale } from "@/lib/i18n";
 
 function Logo4LTree({ className = "w-8 h-8" }: { className?: string }) {
   return (
@@ -17,22 +18,47 @@ function Logo4LTree({ className = "w-8 h-8" }: { className?: string }) {
   );
 }
 
-const navLinks = [
-  { label: "기능", href: "#features" },
-  { label: "사용법", href: "#how-it-works" },
-  { label: "요금제", href: "#pricing" },
-  { label: "문의하기", href: "#contact" },
+const localeOptions: { value: Locale; label: string; flag: string }[] = [
+  { value: "ko", label: "한국어", flag: "🇰🇷" },
+  { value: "en", label: "English", flag: "🇺🇸" },
+  { value: "ja", label: "日本語", flag: "🇯🇵" },
 ];
 
 export function Navbar() {
+  const { locale, setLocale, t } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langDesktopRef = useRef<HTMLDivElement>(null);
+  const langMobileRef = useRef<HTMLDivElement>(null);
+
+  const navLinks = [
+    { label: t("nav.features"), href: "#features" },
+    { label: t("nav.howItWorks"), href: "#how-it-works" },
+    { label: t("nav.pricing"), href: "#pricing" },
+    { label: t("nav.contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+      const insideDesktop = langDesktopRef.current?.contains(target);
+      const insideMobile = langMobileRef.current?.contains(target);
+      if (!insideDesktop && !insideMobile) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const currentLocale = localeOptions.find((o) => o.value === locale)!;
 
   return (
     <nav
@@ -61,31 +87,105 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            {/* Language Switcher */}
+            <div className="relative" ref={langDesktopRef}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors"
+              >
+                <span className="text-base leading-none">{currentLocale.flag}</span>
+                <span className="text-xs">{currentLocale.label}</span>
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white border border-zinc-200 rounded-xl shadow-lg py-1 min-w-[140px] z-50">
+                  {localeOptions.map((option) => (
+                    <button
+                      key={option.value}
+                      onClick={() => {
+                        setLocale(option.value);
+                        setLangOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-2.5 px-3.5 py-2 text-sm transition-colors ${
+                        locale === option.value
+                          ? "text-[#6DBF4A] font-semibold bg-[#6DBF4A]/5"
+                          : "text-zinc-600 hover:bg-zinc-50"
+                      }`}
+                    >
+                      <span className="text-base leading-none">{option.flag}</span>
+                      <span>{option.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <a
               href="#pricing"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#6DBF4A] hover:bg-[#5AA63C] text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-[#6DBF4A]/25"
             >
-              무료로 시작하기
+              {t("nav.startFree")}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
           </div>
 
-          <button
-            className="md:hidden p-2 rounded-lg text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 transition-colors"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          {/* Mobile: language + hamburger */}
+          <div className="flex md:hidden items-center gap-1">
+            <div className="relative" ref={langMobileRef}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="p-2 rounded-lg text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 transition-colors"
+              >
+                <span className="text-lg leading-none">{currentLocale.flag}</span>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white border border-zinc-200 rounded-xl shadow-lg py-1 min-w-[140px] z-50">
+                  {localeOptions.map((option) => (
+                    <button
+                      key={option.value}
+                      onClick={() => {
+                        setLocale(option.value);
+                        setLangOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-2.5 px-3.5 py-2 text-sm transition-colors ${
+                        locale === option.value
+                          ? "text-[#6DBF4A] font-semibold bg-[#6DBF4A]/5"
+                          : "text-zinc-600 hover:bg-zinc-50"
+                      }`}
+                    >
+                      <span className="text-base leading-none">{option.flag}</span>
+                      <span>{option.label}</span>
+                    </button>
+                  ))}
+                </div>
               )}
-            </svg>
-          </button>
+            </div>
+
+            <button
+              className="p-2 rounded-lg text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 transition-colors"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? t("nav.menuClose") : t("nav.menuOpen")}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {menuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {menuOpen && (
@@ -105,7 +205,7 @@ export function Navbar() {
                 href="#pricing"
                 className="block text-center px-5 py-3 bg-[#6DBF4A] hover:bg-[#5AA63C] text-white text-sm font-semibold rounded-xl transition-all"
               >
-                무료로 시작하기
+                {t("nav.startFree")}
               </a>
             </div>
           </div>

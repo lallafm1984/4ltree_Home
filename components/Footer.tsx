@@ -1,4 +1,10 @@
+"use client";
+
+import { useI18n } from "@/lib/i18n";
+
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="bg-white border-t border-zinc-100">
       {/* CTA Banner */}
@@ -20,15 +26,15 @@ export function Footer() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 border border-white/30 rounded-full mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               <span className="text-white text-xs font-bold tracking-widest uppercase">
-                지금 바로 시작하세요
+                {t("footer.ctaBadge")}
               </span>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight break-keep-all mb-4">
-              오늘부터 귀를 훈련하세요
+              {t("footer.ctaTitle")}
             </h2>
             <p className="text-white/80 text-lg max-w-[42ch] mx-auto mb-8 break-keep-all">
-              무료로 시작하고, 매일 꾸준히 연습해서 음악 실력을 키워나가세요.
+              {t("footer.ctaDesc")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -65,10 +71,10 @@ export function Footer() {
           <div className="flex-1" style={{ background: "#F47920" }} />
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-zinc-400 text-sm">© 2026 4L TREE. All rights reserved.</p>
+          <p className="text-zinc-400 text-sm">&copy; 2026 4L TREE. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</a>
-            <a href="/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</a>
+            <a href="/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">{t("footer.terms")}</a>
+            <a href="/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">{t("footer.privacy")}</a>
           </div>
         </div>
       </div>

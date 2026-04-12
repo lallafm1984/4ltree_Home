@@ -9,7 +9,7 @@ description: Supanova Landing Page Design Engine. Generates premium, conversion-
 * DESIGN_VARIANCE: 8 (1=Perfect Symmetry, 10=Artsy Chaos)
 * MOTION_INTENSITY: 6 (1=Static/No movement, 10=Cinematic/Magic Physics)
 * VISUAL_DENSITY: 3 (1=Art Gallery/Airy, 10=Pilot Cockpit/Packed Data)
-* LANDING_PURPOSE: conversion (conversion | brand | portfolio | saas | ecommerce)
+* LANDING_PURPOSE: portfolio (conversion | brand | portfolio | saas | ecommerce)
 
 **AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 3, conversion). Do not ask the user to edit this file. ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 8.
 

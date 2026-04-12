@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775781672525,
+  "lastScanned": 1775982625008,
   "projectRoot": "D:\\Projects\\YulProject_1\\4ltree_home",
   "techStack": {
     "languages": [
@@ -76,9 +76,9 @@
       "path": "app",
       "purpose": "Application code",
       "fileCount": 4,
-      "lastAccessed": 1775781672498,
+      "lastAccessed": 1775982624984,
       "keyFiles": [
-        "favicon.ico",
+        "favicon.webp",
         "globals.css",
         "layout.tsx",
         "page.tsx"
@@ -87,156 +87,166 @@
     "components": {
       "path": "components",
       "purpose": "UI components",
-      "fileCount": 7,
-      "lastAccessed": 1775781672498,
+      "fileCount": 8,
+      "lastAccessed": 1775982624992,
       "keyFiles": [
+        "Contact.tsx",
         "Features.tsx",
         "Footer.tsx",
         "Hero.tsx",
-        "HowItWorks.tsx",
-        "Navbar.tsx"
+        "HowItWorks.tsx"
       ]
     },
     "docs": {
       "path": "docs",
       "purpose": "Documentation",
-      "fileCount": 0,
-      "lastAccessed": 1775781672507,
-      "keyFiles": []
+      "fileCount": 3,
+      "lastAccessed": 1775982624993,
+      "keyFiles": [
+        "AD_COPY.md",
+        "PRIVACY_POLICY.md",
+        "TERMS_OF_SERVICE.md"
+      ]
     },
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 5,
-      "lastAccessed": 1775781672508,
+      "fileCount": 10,
+      "lastAccessed": 1775982624993,
       "keyFiles": [
+        "favicon.webp",
+        "feature-graphic.html",
         "file.svg",
         "globe.svg",
-        "next.svg",
-        "vercel.svg",
-        "window.svg"
+        "next.svg"
       ]
     }
   },
   "hotPaths": [
     {
-      "path": "components\\Features.tsx",
-      "accessCount": 15,
-      "lastAccessed": 1775788630947,
+      "path": "components\\Navbar.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1775984167740,
       "type": "file"
     },
     {
       "path": "components\\HowItWorks.tsx",
-      "accessCount": 6,
-      "lastAccessed": 1775787696034,
-      "type": "file"
-    },
-    {
-      "path": "components\\Pricing.tsx",
-      "accessCount": 6,
-      "lastAccessed": 1775787701214,
-      "type": "file"
-    },
-    {
-      "path": "components\\Navbar.tsx",
       "accessCount": 4,
-      "lastAccessed": 1775787621083,
+      "lastAccessed": 1775984298549,
       "type": "file"
     },
     {
       "path": "components\\Hero.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775787710585,
+      "accessCount": 3,
+      "lastAccessed": 1775983430501,
+      "type": "file"
+    },
+    {
+      "path": "components\\Features.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775983478759,
+      "type": "file"
+    },
+    {
+      "path": "components\\Pricing.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775983524958,
+      "type": "file"
+    },
+    {
+      "path": "components\\Contact.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775983554657,
       "type": "file"
     },
     {
       "path": "components\\Footer.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775787732006,
-      "type": "file"
-    },
-    {
-      "path": "app\\globals.css",
       "accessCount": 3,
-      "lastAccessed": 1775784107214,
+      "lastAccessed": 1775983578057,
       "type": "file"
     },
     {
       "path": "components\\Testimonials.tsx",
       "accessCount": 3,
-      "lastAccessed": 1775784330685,
-      "type": "file"
-    },
-    {
-      "path": "tailwind.config.ts",
-      "accessCount": 2,
-      "lastAccessed": 1775782163291,
+      "lastAccessed": 1775983599016,
       "type": "file"
     },
     {
       "path": "app\\layout.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1775782169495,
+      "accessCount": 3,
+      "lastAccessed": 1775983624695,
+      "type": "file"
+    },
+    {
+      "path": "lib\\i18n.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775984149625,
       "type": "file"
     },
     {
       "path": "app\\page.tsx",
       "accessCount": 2,
-      "lastAccessed": 1775785603405,
+      "lastAccessed": 1775982818455,
       "type": "file"
     },
     {
-      "path": "components\\Contact.tsx",
+      "path": "next.config.ts",
       "accessCount": 2,
-      "lastAccessed": 1775787702096,
+      "lastAccessed": 1775982818979,
       "type": "file"
     },
     {
-      "path": ".claude\\skills\\supanova-design-skill\\taste-skill\\SKILL.md",
+      "path": "package.json",
       "accessCount": 1,
-      "lastAccessed": 1775781978571,
+      "lastAccessed": 1775982772374,
       "type": "file"
     },
     {
-      "path": "app",
+      "path": "tsconfig.json",
       "accessCount": 1,
-      "lastAccessed": 1775781978761,
-      "type": "directory"
+      "lastAccessed": 1775982781021,
+      "type": "file"
     },
     {
-      "path": "components",
+      "path": "app\\privacy\\page.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775781983197,
-      "type": "directory"
+      "lastAccessed": 1775982783965,
+      "type": "file"
+    },
+    {
+      "path": "app\\terms\\page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775982784187,
+      "type": "file"
+    },
+    {
+      "path": "app\\delete-account\\page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775982784406,
+      "type": "file"
     },
     {
       "path": "components\\ui\\Button.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775781993373,
+      "lastAccessed": 1775982784574,
       "type": "file"
     },
     {
       "path": "components\\ui\\SectionTitle.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775781993526,
+      "lastAccessed": 1775982787695,
       "type": "file"
     },
     {
-      "path": "",
+      "path": "README.md",
       "accessCount": 1,
-      "lastAccessed": 1775781996547,
-      "type": "directory"
+      "lastAccessed": 1775982796500,
+      "type": "file"
     },
     {
-      "path": "public\\img",
+      "path": "components\\ClientProvider.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775784067977,
-      "type": "directory"
-    },
-    {
-      "path": "public\\img\\plans.webp",
-      "accessCount": 1,
-      "lastAccessed": 1775784955931,
+      "lastAccessed": 1775983613573,
       "type": "file"
     }
   ],

@@ -2,38 +2,38 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useI18n, getLocalizedImage } from "@/lib/i18n";
 
-const steps = [
+const stepKeys = [
   {
     step: "01",
-    title: "카테고리 선택",
-    description:
-      "멜로디, 리듬, 화음 등 오늘 훈련할 카테고리를 선택하세요. 난이도를 자유롭게 조절하여 집중적으로 훈련할 수 있습니다.",
+    titleKey: "how.step1.title",
+    descKey: "how.step1.desc",
+    tagsKey: "how.step1.tags",
     accent: "#6DBF4A",
     img: "/img/category.webp",
-    tags: ["난이도 조절", "카테고리 선택", "집중 모드"],
   },
   {
     step: "02",
-    title: "듣고 풀기",
-    description:
-      "음악을 듣고 정답을 입력하세요. 오선보에 음표를 그리거나, 건반을 누르거나, 선택지를 고르는 다양한 방식으로 답할 수 있습니다.",
+    titleKey: "how.step2.title",
+    descKey: "how.step2.desc",
+    tagsKey: "how.step2.tags",
     accent: "#4AADD9",
     img: "/img/melody.webp",
-    tags: ["오선보 입력", "건반 모드", "선택형 문제"],
   },
   {
     step: "03",
-    title: "성장 확인",
-    description:
-      "매일 훈련 스트릭을 유지하고 통계 대시보드에서 내 실력 향상을 확인하세요. 약점 분석으로 어떤 부분을 집중해야 할지 명확히 알 수 있습니다.",
+    titleKey: "how.step3.title",
+    descKey: "how.step3.desc",
+    tagsKey: "how.step3.tags",
     accent: "#F47920",
     img: "/img/stats.webp",
-    tags: ["통계 대시보드", "약점 분석", "스트릭 유지"],
   },
 ];
 
 export function HowItWorks() {
+  const { locale, t } = useI18n();
+
   return (
     <section id="how-it-works" className="py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,19 +50,19 @@ export function HowItWorks() {
             className="inline-block mb-3 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase"
             style={{ background: "#F4792015", color: "#F47920" }}
           >
-            사용 방법
+            {t("how.badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 tracking-tight leading-tight break-keep-all">
-            3단계로 바로 시작하세요
+            {t("how.title")}
           </h2>
           <p className="mt-4 text-lg text-zinc-500 max-w-[44ch] mx-auto break-keep-all">
-            복잡한 설정 없이 앱을 열면 바로 청음 훈련을 시작할 수 있습니다.
+            {t("how.subtitle")}
           </p>
         </motion.div>
 
         {/* Zig-zag steps */}
         <div className="space-y-24">
-          {steps.map((item, index) => (
+          {stepKeys.map((item, index) => (
             <motion.div
               key={item.step}
               initial={{ opacity: 0, y: 28 }}
@@ -73,15 +73,18 @@ export function HowItWorks() {
                 index % 2 === 1 ? "lg:[direction:rtl]" : ""
               }`}
             >
-              {/* Image side — 50% size: centered within column */}
+              {/* Image side */}
               <div className={`flex justify-center items-center ${index % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
                 <div
                   className="relative rounded-2xl overflow-hidden shadow-lg w-[50%] min-w-[180px] max-w-xs"
                   style={{ border: `2px solid ${item.accent}30` }}
                 >
                   <Image
-                    src={item.img}
-                    alt={item.title}
+                    src={getLocalizedImage(
+                      item.img === "/img/category.webp" && locale !== "ko" ? "/img/main.webp" : item.img,
+                      locale
+                    )}
+                    alt={t(item.titleKey)}
                     width={400}
                     height={600}
                     className="w-full h-auto object-contain"
@@ -109,14 +112,14 @@ export function HowItWorks() {
                 </div>
 
                 <h3 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight leading-tight break-keep-all mb-4">
-                  {item.title}
+                  {t(item.titleKey)}
                 </h3>
                 <p className="text-zinc-500 text-lg leading-relaxed break-keep-all mb-7">
-                  {item.description}
+                  {t(item.descKey)}
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
+                  {t(item.tagsKey).split(",").map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1.5 rounded-lg text-xs font-semibold border"

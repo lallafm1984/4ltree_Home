@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useI18n } from "@/lib/i18n";
 
 export function Contact() {
+  const { t } = useI18n();
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
@@ -28,21 +30,20 @@ export function Contact() {
               className="inline-block mb-4 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase"
               style={{ background: "#6DBF4A15", color: "#5AA63C" }}
             >
-              문의하기
+              {t("contact.badge")}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 tracking-tight leading-tight break-keep-all mb-5">
-              궁금한 점이
+              {t("contact.title1")}
               <br />
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(90deg, #6DBF4A 0%, #4AADD9 100%)" }}
               >
-                있으신가요?
+                {t("contact.title2")}
               </span>
             </h2>
             <p className="text-zinc-500 text-lg leading-relaxed break-keep-all mb-8">
-              서비스 이용, 요금제, 기술 지원 등 무엇이든 편하게
-              문의해 주세요. 빠르게 답변 드리겠습니다.
+              {t("contact.desc")}
             </p>
 
             {/* Contact info card */}
@@ -56,7 +57,7 @@ export function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">이메일</p>
+                <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">{t("contact.emailLabel")}</p>
                 <a
                   href="mailto:4ltree.service@gmail.com"
                   className="text-zinc-900 font-semibold hover:text-[#6DBF4A] transition-colors text-sm"
@@ -69,8 +70,8 @@ export function Contact() {
             {/* Response time indicators */}
             <div className="flex gap-6 mt-6">
               {[
-                { label: "평균 응답", value: "24시간 내", color: "#6DBF4A" },
-                { label: "운영 시간", value: "평일 9-18시", color: "#4AADD9" },
+                { label: t("contact.avgResponse"), value: t("contact.avgResponseValue"), color: "#6DBF4A" },
+                { label: t("contact.hours"), value: t("contact.hoursValue"), color: "#4AADD9" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="text-xs text-zinc-400 mb-0.5">{item.label}</p>
@@ -88,19 +89,19 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="surface-card rounded-3xl p-8"
           >
-            <h3 className="text-lg font-bold text-zinc-900 mb-6">메일 보내기</h3>
+            <h3 className="text-lg font-bold text-zinc-900 mb-6">{t("contact.formTitle")}</h3>
 
             <div className="space-y-4">
               {/* Subject */}
               <div>
                 <label className="block text-xs font-bold text-zinc-500 uppercase tracking-widest mb-2">
-                  제목
+                  {t("contact.subjectLabel")}
                 </label>
                 <input
                   type="text"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  placeholder="문의 제목을 입력하세요"
+                  placeholder={t("contact.subjectPlaceholder")}
                   className="w-full px-4 py-3 rounded-xl border border-zinc-200 bg-zinc-50 text-zinc-900 text-sm placeholder:text-zinc-400 focus:outline-none focus:border-[#6DBF4A] focus:ring-2 focus:ring-[#6DBF4A]/15 transition-all"
                 />
               </div>
@@ -108,12 +109,12 @@ export function Contact() {
               {/* Message */}
               <div>
                 <label className="block text-xs font-bold text-zinc-500 uppercase tracking-widest mb-2">
-                  내용
+                  {t("contact.messageLabel")}
                 </label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="문의 내용을 자세히 적어주세요"
+                  placeholder={t("contact.messagePlaceholder")}
                   rows={6}
                   className="w-full px-4 py-3 rounded-xl border border-zinc-200 bg-zinc-50 text-zinc-900 text-sm placeholder:text-zinc-400 focus:outline-none focus:border-[#6DBF4A] focus:ring-2 focus:ring-[#6DBF4A]/15 transition-all resize-none"
                 />
@@ -132,11 +133,11 @@ export function Contact() {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
-                메일 앱으로 보내기
+                {t("contact.sendBtn")}
               </button>
 
               <p className="text-xs text-zinc-400 text-center">
-                버튼을 누르면 기본 메일 앱이 열립니다
+                {t("contact.sendNote")}
               </p>
             </div>
           </motion.div>

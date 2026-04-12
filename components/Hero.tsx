@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useI18n, getLocalizedImage } from "@/lib/i18n";
 
 export function Hero() {
+  const { locale, t } = useI18n();
+
   return (
     <section className="relative min-h-[100dvh] flex items-center bg-white overflow-hidden">
       {/* Soft color blobs */}
@@ -41,21 +44,19 @@ export function Hero() {
 
             {/* Headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-zinc-900 leading-tight tracking-tight break-keep-all mb-6">
-              귀를 훈련하면{" "}
+              {t("hero.headline1")}{" "}
               <br className="hidden sm:block" />
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(90deg, #6DBF4A 0%, #4AADD9 100%)" }}
               >
-                음악이
+                {t("hero.headlineHighlight")}
               </span>{" "}
-              달라집니다
+              {t("hero.headline2")}
             </h1>
 
             <p className="text-lg text-zinc-500 leading-relaxed max-w-[52ch] mb-10 break-keep-all">
-              멜로디 받아쓰기부터 화음 인식까지, 음악가에게 꼭 필요한
-              6가지 청음 훈련을 매일 꾸준히. 음대 입시생부터
-              취미 음악가까지 모두를 위한 체계적인 훈련 앱.
+              {t("hero.description")}
             </p>
 
             {/* CTAs */}
@@ -119,8 +120,8 @@ export function Hero() {
                 {/* Screenshot image */}
                 <div className="mx-3 mb-3 mt-2 rounded-2xl overflow-hidden">
                   <Image
-                    src="/img/main.webp"
-                    alt="MelodyGen 앱 화면"
+                    src={getLocalizedImage("/img/main.webp", locale)}
+                    alt={t("hero.imgAlt")}
                     width={280}
                     height={500}
                     className="w-full object-cover"
@@ -130,7 +131,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Floating badge — 완료 */}
+            {/* Floating badge */}
             <div
               className="absolute -left-8 top-[30%] bg-white rounded-2xl px-4 py-3 shadow-xl border border-zinc-100 animate-float"
               style={{ animationDelay: "0.8s" }}
@@ -142,13 +143,13 @@ export function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-zinc-900 text-xs font-bold">훈련 완료!</p>
-                  <p className="text-zinc-400 text-[10px]">멜로디 받아쓰기 +15 XP</p>
+                  <p className="text-zinc-900 text-xs font-bold">{t("hero.badgeComplete")}</p>
+                  <p className="text-zinc-400 text-[10px]">{t("hero.badgeCompleteDetail")}</p>
                 </div>
               </div>
             </div>
 
-            {/* Floating badge — 스트릭 */}
+            {/* Floating badge — streak */}
             <div
               className="absolute -right-6 bottom-[28%] bg-white rounded-2xl px-4 py-3 shadow-xl border border-zinc-100 animate-float"
               style={{ animationDelay: "1.6s" }}
@@ -160,8 +161,8 @@ export function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-zinc-900 text-xs font-bold">14일 연속</p>
-                  <p className="text-zinc-400 text-[10px]">최장 기록 갱신!</p>
+                  <p className="text-zinc-900 text-xs font-bold">{t("hero.badgeStreak")}</p>
+                  <p className="text-zinc-400 text-[10px]">{t("hero.badgeStreakDetail")}</p>
                 </div>
               </div>
             </div>
