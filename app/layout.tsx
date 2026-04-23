@@ -33,11 +33,6 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   category: "technology",
-  icons: {
-    icon: [{ url: "/favicon.webp", type: "image/webp" }],
-    shortcut: "/favicon.webp",
-    apple: "/favicon.webp",
-  },
   alternates: {
     canonical: "/",
   },
@@ -87,7 +82,7 @@ const organizationJsonLd = {
   name: SITE_NAME,
   alternateName: "4L TREE",
   url: SITE_URL,
-  logo: `${SITE_URL}/favicon.webp`,
+  logo: `${SITE_URL}/weblogo.png`,
   email: "4ltree.service@gmail.com",
   sameAs: [],
 };

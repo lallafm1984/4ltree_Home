@@ -134,6 +134,12 @@
   },
   "hotPaths": [
     {
+      "path": "app\\layout.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1776926189915,
+      "type": "file"
+    },
+    {
       "path": "app\\page.tsx",
       "accessCount": 6,
       "lastAccessed": 1776912847368,
@@ -155,12 +161,6 @@
       "path": "components\\Footer.tsx",
       "accessCount": 3,
       "lastAccessed": 1776913545681,
-      "type": "file"
-    },
-    {
-      "path": "app\\layout.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1776913916868,
       "type": "file"
     },
     {
@@ -269,6 +269,12 @@
       "path": "C:\\Users\\Lim\\AppData\\Local\\Temp\\claude\\D--Projects-YulProject-1-4ltree-home\\4dc5775a-47ac-4fa7-9ced-4985cd97f946\\tasks\\b9rai5r2i.output",
       "accessCount": 1,
       "lastAccessed": 1776913961449,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\Lim\\AppData\\Local\\Temp\\claude\\D--Projects-YulProject-1-4ltree-home\\fdab899c-619f-4cce-9177-a06d4987bb11\\tasks\\ba33mkzbm.output",
+      "accessCount": 1,
+      "lastAccessed": 1776926208038,
       "type": "file"
     }
   ],
