@@ -70,7 +70,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2.5 shrink-0">
+          <a href="/" className="flex items-center gap-2.5 shrink-0">
             <Logo4LTree className="w-9 h-9" />
             <span className="text-lg font-bold text-zinc-900 tracking-tight">4L TREE</span>
           </a>

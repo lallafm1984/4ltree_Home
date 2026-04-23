@@ -73,8 +73,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-zinc-400 text-sm">&copy; 2026 4L TREE. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">{t("footer.terms")}</a>
-            <a href="/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">{t("footer.privacy")}</a>
+            <a href="/melodygen/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">{t("footer.terms")}</a>
+            <a href="/melodygen/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">{t("footer.privacy")}</a>
           </div>
         </div>
       </div>

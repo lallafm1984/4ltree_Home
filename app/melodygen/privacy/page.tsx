@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       {/* Header */}
       <header className="border-b border-zinc-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/melodygen" className="flex items-center gap-2 group">
             <span className="text-base font-bold text-zinc-900 group-hover:text-[#6DBF4A] transition-colors">
               ← 홈으로
             </span>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
         <div className="prose prose-zinc max-w-none space-y-10 text-zinc-700 leading-relaxed">
 
           <Section title="1. 개인정보의 수집 및 이용 목적">
-            <p>MelodyGen(이하 "앱")은 다음 목적으로 개인정보를 수집 및 이용합니다:</p>
+            <p>MelodyGen(이하 &quot;앱&quot;)은 다음 목적으로 개인정보를 수집 및 이용합니다:</p>
             <ul>
               <li>회원 가입 및 로그인 서비스 제공</li>
               <li>구독 서비스 관리</li>
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
               <li><strong>개인정보 수정</strong>: 표시 이름 변경</li>
               <li>
                 <strong>계정 삭제(회원 탈퇴)</strong>: 앱 내 프로필 화면에서 삭제 또는{" "}
-                <Link href="/delete-account" className="text-[#6DBF4A] hover:underline">
+                <Link href="/melodygen/delete-account" className="text-[#6DBF4A] hover:underline">
                   계정 삭제 요청 페이지
                 </Link>
                 에서 신청
@@ -175,8 +175,8 @@ export default function PrivacyPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-zinc-400 text-sm">© 2026 4L TREE. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</Link>
-            <Link href="/privacy" className="text-[#6DBF4A] text-xs font-semibold">개인정보처리방침</Link>
+            <Link href="/melodygen/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</Link>
+            <Link href="/melodygen/privacy" className="text-[#6DBF4A] text-xs font-semibold">개인정보처리방침</Link>
           </div>
         </div>
       </footer>

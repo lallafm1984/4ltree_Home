@@ -3,15 +3,15 @@ import "./globals.css";
 import { ClientProvider } from "@/components/ClientProvider";
 
 export const metadata: Metadata = {
-  title: "MelodyGen by 4LTree — Train Your Ear",
+  title: "4LTree — Crafting useful products",
   description:
-    "Improve your musical skills with MelodyGen — 6 ear training exercises including melody dictation, rhythm training, and chord recognition.",
+    "4LTree is a studio building small, focused products. Explore our projects including MelodyGen, an ear training app for musicians.",
   icons: {
     icon: "/favicon.webp",
   },
   openGraph: {
-    title: "MelodyGen by 4LTree",
-    description: "Ear training app for musicians",
+    title: "4LTree",
+    description: "Crafting useful products.",
     type: "website",
   },
 };

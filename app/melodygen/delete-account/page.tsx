@@ -21,7 +21,7 @@ export default function DeleteAccountPage() {
       {/* Header */}
       <header className="border-b border-zinc-100">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
-          <Link href="/" className="text-base font-bold text-zinc-900 hover:text-[#6DBF4A] transition-colors">
+          <Link href="/melodygen" className="text-base font-bold text-zinc-900 hover:text-[#6DBF4A] transition-colors">
             ← 홈으로
           </Link>
           <div className="flex h-1 w-16 rounded-full overflow-hidden">
@@ -157,7 +157,7 @@ export default function DeleteAccountPage() {
           </div>
           <p className="text-xs text-zinc-400">
             자세한 내용은{" "}
-            <Link href="/privacy" className="text-[#6DBF4A] hover:underline">
+            <Link href="/melodygen/privacy" className="text-[#6DBF4A] hover:underline">
               개인정보처리방침
             </Link>
             을 참고하세요.
@@ -170,8 +170,8 @@ export default function DeleteAccountPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-zinc-400 text-sm">© 2026 4L TREE. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</Link>
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</Link>
+            <Link href="/melodygen/terms" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">이용약관</Link>
+            <Link href="/melodygen/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</Link>
           </div>
         </div>
       </footer>

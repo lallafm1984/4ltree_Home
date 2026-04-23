@@ -11,7 +11,7 @@ export default function TermsPage() {
       {/* Header */}
       <header className="border-b border-zinc-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/melodygen" className="flex items-center gap-2 group">
             <span className="text-base font-bold text-zinc-900 group-hover:text-[#6DBF4A] transition-colors">
               ← 홈으로
             </span>
@@ -44,7 +44,7 @@ export default function TermsPage() {
 
           <Section title="제1조 (목적)">
             <p className="text-sm md:text-base">
-              이 약관은 MelodyGen(이하 "앱")이 제공하는 청음 훈련 서비스의 이용 조건 및 절차에 관한 사항을 규정합니다.
+              이 약관은 MelodyGen(이하 &quot;앱&quot;)이 제공하는 청음 훈련 서비스의 이용 조건 및 절차에 관한 사항을 규정합니다.
             </p>
           </Section>
 
@@ -157,8 +157,8 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-zinc-400 text-sm">© 2026 4L TREE. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/terms" className="text-[#4AADD9] text-xs font-semibold">이용약관</Link>
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</Link>
+            <Link href="/melodygen/terms" className="text-[#4AADD9] text-xs font-semibold">이용약관</Link>
+            <Link href="/melodygen/privacy" className="text-zinc-400 hover:text-zinc-600 text-xs transition-colors">개인정보처리방침</Link>
           </div>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775982625008,
+  "lastScanned": 1776909836242,
   "projectRoot": "D:\\Projects\\YulProject_1\\4ltree_home",
   "techStack": {
     "languages": [
@@ -66,6 +66,7 @@
       "app",
       "components",
       "docs",
+      "lib",
       "public"
     ],
     "gitBranches": null
@@ -76,7 +77,7 @@
       "path": "app",
       "purpose": "Application code",
       "fileCount": 4,
-      "lastAccessed": 1775982624984,
+      "lastAccessed": 1776909836215,
       "keyFiles": [
         "favicon.webp",
         "globals.css",
@@ -87,32 +88,41 @@
     "components": {
       "path": "components",
       "purpose": "UI components",
-      "fileCount": 8,
-      "lastAccessed": 1775982624992,
+      "fileCount": 9,
+      "lastAccessed": 1776909836216,
       "keyFiles": [
+        "ClientProvider.tsx",
         "Contact.tsx",
         "Features.tsx",
         "Footer.tsx",
-        "Hero.tsx",
-        "HowItWorks.tsx"
+        "Hero.tsx"
       ]
     },
     "docs": {
       "path": "docs",
       "purpose": "Documentation",
       "fileCount": 3,
-      "lastAccessed": 1775982624993,
+      "lastAccessed": 1776909836224,
       "keyFiles": [
         "AD_COPY.md",
         "PRIVACY_POLICY.md",
         "TERMS_OF_SERVICE.md"
       ]
     },
+    "lib": {
+      "path": "lib",
+      "purpose": "Library code",
+      "fileCount": 1,
+      "lastAccessed": 1776909836225,
+      "keyFiles": [
+        "i18n.tsx"
+      ]
+    },
     "public": {
       "path": "public",
       "purpose": "Public files",
       "fileCount": 10,
-      "lastAccessed": 1775982624993,
+      "lastAccessed": 1776909836225,
       "keyFiles": [
         "favicon.webp",
         "feature-graphic.html",
@@ -124,129 +134,111 @@
   },
   "hotPaths": [
     {
-      "path": "components\\Navbar.tsx",
-      "accessCount": 7,
-      "lastAccessed": 1775984167740,
+      "path": "app\\page.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1776912847368,
       "type": "file"
     },
     {
-      "path": "components\\HowItWorks.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775984298549,
-      "type": "file"
-    },
-    {
-      "path": "components\\Hero.tsx",
+      "path": "",
       "accessCount": 3,
-      "lastAccessed": 1775983430501,
-      "type": "file"
+      "lastAccessed": 1776910263807,
+      "type": "directory"
     },
     {
-      "path": "components\\Features.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775983478759,
-      "type": "file"
-    },
-    {
-      "path": "components\\Pricing.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775983524958,
-      "type": "file"
-    },
-    {
-      "path": "components\\Contact.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775983554657,
+      "path": "app\\layout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776910219541,
       "type": "file"
     },
     {
       "path": "components\\Footer.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775983578057,
-      "type": "file"
-    },
-    {
-      "path": "components\\Testimonials.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775983599016,
-      "type": "file"
-    },
-    {
-      "path": "app\\layout.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775983624695,
-      "type": "file"
-    },
-    {
-      "path": "lib\\i18n.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775984149625,
-      "type": "file"
-    },
-    {
-      "path": "app\\page.tsx",
       "accessCount": 2,
-      "lastAccessed": 1775982818455,
+      "lastAccessed": 1776910254883,
       "type": "file"
     },
     {
-      "path": "next.config.ts",
+      "path": "components\\Navbar.tsx",
       "accessCount": 2,
-      "lastAccessed": 1775982818979,
-      "type": "file"
-    },
-    {
-      "path": "package.json",
-      "accessCount": 1,
-      "lastAccessed": 1775982772374,
-      "type": "file"
-    },
-    {
-      "path": "tsconfig.json",
-      "accessCount": 1,
-      "lastAccessed": 1775982781021,
-      "type": "file"
-    },
-    {
-      "path": "app\\privacy\\page.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1775982783965,
-      "type": "file"
-    },
-    {
-      "path": "app\\terms\\page.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1775982784187,
+      "lastAccessed": 1776910256257,
       "type": "file"
     },
     {
       "path": "app\\delete-account\\page.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775982784406,
+      "lastAccessed": 1776910044676,
       "type": "file"
     },
     {
-      "path": "components\\ui\\Button.tsx",
+      "path": "app\\privacy\\page.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775982784574,
+      "lastAccessed": 1776910045075,
       "type": "file"
     },
     {
-      "path": "components\\ui\\SectionTitle.tsx",
+      "path": "app\\terms\\page.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775982787695,
+      "lastAccessed": 1776910045478,
       "type": "file"
     },
     {
-      "path": "README.md",
+      "path": "components\\Hero.tsx",
       "accessCount": 1,
-      "lastAccessed": 1775982796500,
+      "lastAccessed": 1776910053845,
       "type": "file"
     },
     {
-      "path": "components\\ClientProvider.tsx",
+      "path": "lib",
       "accessCount": 1,
-      "lastAccessed": 1775983613573,
+      "lastAccessed": 1776910076680,
+      "type": "directory"
+    },
+    {
+      "path": "app\\melodygen\\layout.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776910123327,
+      "type": "file"
+    },
+    {
+      "path": "app\\melodygen\\page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776910123598,
+      "type": "file"
+    },
+    {
+      "path": "app\\melodygen\\delete-account\\page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776910141343,
+      "type": "file"
+    },
+    {
+      "path": "app\\melodygen\\privacy\\page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776910175737,
+      "type": "file"
+    },
+    {
+      "path": "app\\melodygen\\terms\\page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776910210357,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\Lim\\AppData\\Local\\Temp\\claude\\D--Projects-YulProject-1-4ltree-home\\4dc5775a-47ac-4fa7-9ced-4985cd97f946\\tasks\\bdtjjnp21.output",
+      "accessCount": 1,
+      "lastAccessed": 1776910278891,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\Lim\\AppData\\Local\\Temp\\claude\\D--Projects-YulProject-1-4ltree-home\\4dc5775a-47ac-4fa7-9ced-4985cd97f946\\tasks\\bbie1ocg2.output",
+      "accessCount": 1,
+      "lastAccessed": 1776910411714,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\Lim\\AppData\\Local\\Temp\\claude\\D--Projects-YulProject-1-4ltree-home\\4dc5775a-47ac-4fa7-9ced-4985cd97f946\\tasks\\bdyz8pcqs.output",
+      "accessCount": 1,
+      "lastAccessed": 1776911948690,
       "type": "file"
     }
   ],
