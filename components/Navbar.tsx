@@ -129,15 +129,6 @@ export function Navbar() {
               )}
             </div>
 
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#6DBF4A] hover:bg-[#5AA63C] text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-[#6DBF4A]/25"
-            >
-              {t("nav.startFree")}
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
           </div>
 
           {/* Mobile: language + hamburger */}
@@ -200,14 +191,6 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <div className="px-4 pt-2 pb-1">
-              <a
-                href="#pricing"
-                className="block text-center px-5 py-3 bg-[#6DBF4A] hover:bg-[#5AA63C] text-white text-sm font-semibold rounded-xl transition-all"
-              >
-                {t("nav.startFree")}
-              </a>
-            </div>
           </div>
         )}
       </div>

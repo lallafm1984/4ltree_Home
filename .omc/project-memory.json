@@ -140,10 +140,22 @@
       "type": "file"
     },
     {
+      "path": "components\\Navbar.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1776913628433,
+      "type": "file"
+    },
+    {
       "path": "",
-      "accessCount": 3,
-      "lastAccessed": 1776910263807,
+      "accessCount": 4,
+      "lastAccessed": 1776913555406,
       "type": "directory"
+    },
+    {
+      "path": "components\\Footer.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776913545681,
+      "type": "file"
     },
     {
       "path": "app\\layout.tsx",
@@ -152,16 +164,22 @@
       "type": "file"
     },
     {
-      "path": "components\\Footer.tsx",
+      "path": "components\\Hero.tsx",
       "accessCount": 2,
-      "lastAccessed": 1776910254883,
+      "lastAccessed": 1776913533375,
       "type": "file"
     },
     {
-      "path": "components\\Navbar.tsx",
+      "path": "components",
       "accessCount": 2,
-      "lastAccessed": 1776910256257,
-      "type": "file"
+      "lastAccessed": 1776913550320,
+      "type": "directory"
+    },
+    {
+      "path": "lib",
+      "accessCount": 2,
+      "lastAccessed": 1776913551241,
+      "type": "directory"
     },
     {
       "path": "app\\delete-account\\page.tsx",
@@ -180,18 +198,6 @@
       "accessCount": 1,
       "lastAccessed": 1776910045478,
       "type": "file"
-    },
-    {
-      "path": "components\\Hero.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1776910053845,
-      "type": "file"
-    },
-    {
-      "path": "lib",
-      "accessCount": 1,
-      "lastAccessed": 1776910076680,
-      "type": "directory"
     },
     {
       "path": "app\\melodygen\\layout.tsx",
