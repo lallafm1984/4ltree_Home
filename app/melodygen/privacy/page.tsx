@@ -2,7 +2,18 @@ import Link from "next/link";
 
 export const metadata = {
   title: "개인정보처리방침 — MelodyGen",
-  description: "MelodyGen 개인정보처리방침",
+  description:
+    "MelodyGen(4LTree) 개인정보처리방침. 수집 항목, 이용 목적, 보관 기간, 제3자 제공 및 이용자 권리에 관한 안내.",
+  alternates: { canonical: "/melodygen/privacy" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://4ltree.com/melodygen/privacy",
+    siteName: "4LTree",
+    title: "개인정보처리방침 — MelodyGen",
+    description: "MelodyGen 개인정보처리방침",
+    locale: "ko_KR",
+  },
 };
 
 export default function PrivacyPage() {

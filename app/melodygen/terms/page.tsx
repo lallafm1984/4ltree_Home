@@ -2,7 +2,18 @@ import Link from "next/link";
 
 export const metadata = {
   title: "이용약관 — MelodyGen",
-  description: "MelodyGen 이용약관",
+  description:
+    "MelodyGen(4LTree) 이용약관. 서비스 내용, 유료 구독, 이용자 의무, 계정 삭제 및 분쟁 해결 규정.",
+  alternates: { canonical: "/melodygen/terms" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://4ltree.com/melodygen/terms",
+    siteName: "4LTree",
+    title: "이용약관 — MelodyGen",
+    description: "MelodyGen 이용약관",
+    locale: "ko_KR",
+  },
 };
 
 export default function TermsPage() {
