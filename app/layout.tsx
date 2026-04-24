@@ -3,31 +3,28 @@ import "./globals.css";
 import { ClientProvider } from "@/components/ClientProvider";
 
 const SITE_URL = "https://4ltree.com";
-const SITE_NAME = "4LTree";
+const SITE_NAME = "포엘트리";
+const SITE_NAME_EN = "4LTree";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "4LTree — 작고 유용한 제품을 정성스럽게 만듭니다",
-    template: "%s | 4LTree",
+    default: "포엘트리(4LTree) — 작고 유용한 제품을 정성스럽게 만듭니다",
+    template: "%s | 포엘트리",
   },
   description:
-    "4LTree는 일상과 학습을 돕는 작은 제품을 만드는 스튜디오입니다. 음악가를 위한 청음 훈련 앱 MelodyGen을 포함한 프로젝트를 소개합니다.",
+    "포엘트리(4LTree)는 일상과 학습을 돕는 작은 제품을 만드는 스튜디오입니다. 현재 운영 중인 프로젝트를 확인해 보세요.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   keywords: [
-    "4LTree",
-    "4ltree",
     "포엘트리",
-    "MelodyGen",
-    "멜로디젠",
-    "청음 앱",
-    "이어트레이닝",
-    "ear training",
-    "음악 학습",
-    "음악 교육",
-    "시창청음",
-    "입시 청음",
+    "4LTree",
+    "4L TREE",
+    "4ltree",
+    "포엘트리 스튜디오",
+    "제품 스튜디오",
+    "인디 스튜디오",
+    "프로젝트",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -40,15 +37,15 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "4LTree — 작고 유용한 제품을 정성스럽게 만듭니다",
+    title: "포엘트리(4LTree) — 작고 유용한 제품을 정성스럽게 만듭니다",
     description:
-      "4LTree는 일상과 학습을 돕는 작은 제품을 만드는 스튜디오입니다.",
+      "포엘트리는 일상과 학습을 돕는 작은 제품을 만드는 스튜디오입니다.",
     locale: "ko_KR",
     alternateLocale: ["en_US", "ja_JP"],
   },
   twitter: {
     card: "summary",
-    title: "4LTree",
+    title: "포엘트리(4LTree)",
     description: "작고 유용한 제품을 정성스럽게 만듭니다.",
   },
   robots: {
@@ -80,7 +77,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
-  alternateName: "4L TREE",
+  alternateName: [SITE_NAME_EN, "4L TREE", "4ltree"],
   url: SITE_URL,
   logo: `${SITE_URL}/weblogo.png`,
   email: "4ltree.service@gmail.com",
@@ -91,8 +88,11 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE_NAME,
+  alternateName: [SITE_NAME_EN, "4L TREE"],
   url: SITE_URL,
   inLanguage: "ko-KR",
+  description:
+    "포엘트리(4LTree)는 일상과 학습을 돕는 작은 제품을 만드는 스튜디오입니다.",
   publisher: { "@type": "Organization", name: SITE_NAME },
 };
 

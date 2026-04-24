@@ -135,20 +135,26 @@
   "hotPaths": [
     {
       "path": "app\\layout.tsx",
-      "accessCount": 7,
-      "lastAccessed": 1776926189915,
+      "accessCount": 13,
+      "lastAccessed": 1776996314072,
       "type": "file"
     },
     {
       "path": "app\\page.tsx",
-      "accessCount": 6,
-      "lastAccessed": 1776912847368,
+      "accessCount": 7,
+      "lastAccessed": 1776995633726,
       "type": "file"
     },
     {
       "path": "components\\Navbar.tsx",
-      "accessCount": 5,
-      "lastAccessed": 1776913628433,
+      "accessCount": 6,
+      "lastAccessed": 1776995687191,
+      "type": "file"
+    },
+    {
+      "path": "app\\melodygen\\layout.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1776995762358,
       "type": "file"
     },
     {
@@ -159,14 +165,20 @@
     },
     {
       "path": "components\\Footer.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1776913545681,
+      "accessCount": 4,
+      "lastAccessed": 1776995686961,
       "type": "file"
     },
     {
       "path": "components\\Hero.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776913533375,
+      "accessCount": 3,
+      "lastAccessed": 1776995644406,
+      "type": "file"
+    },
+    {
+      "path": "app\\sitemap.ts",
+      "accessCount": 3,
+      "lastAccessed": 1776996319398,
       "type": "file"
     },
     {
@@ -182,12 +194,6 @@
       "type": "directory"
     },
     {
-      "path": "app\\melodygen\\layout.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776913929137,
-      "type": "file"
-    },
-    {
       "path": "app\\melodygen\\privacy\\page.tsx",
       "accessCount": 2,
       "lastAccessed": 1776913935498,
@@ -197,6 +203,18 @@
       "path": "app\\melodygen\\terms\\page.tsx",
       "accessCount": 2,
       "lastAccessed": 1776913938036,
+      "type": "file"
+    },
+    {
+      "path": "app\\melodygen\\page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776995639924,
+      "type": "file"
+    },
+    {
+      "path": "app\\robots.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776995644025,
       "type": "file"
     },
     {
@@ -215,12 +233,6 @@
       "path": "app\\terms\\page.tsx",
       "accessCount": 1,
       "lastAccessed": 1776910045478,
-      "type": "file"
-    },
-    {
-      "path": "app\\melodygen\\page.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1776910123598,
       "type": "file"
     },
     {
@@ -248,18 +260,6 @@
       "type": "file"
     },
     {
-      "path": "app\\sitemap.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776913903576,
-      "type": "file"
-    },
-    {
-      "path": "app\\robots.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776913905110,
-      "type": "file"
-    },
-    {
       "path": "app\\melodygen\\delete-account\\layout.tsx",
       "accessCount": 1,
       "lastAccessed": 1776913932070,
@@ -275,6 +275,12 @@
       "path": "C:\\Users\\Lim\\AppData\\Local\\Temp\\claude\\D--Projects-YulProject-1-4ltree-home\\fdab899c-619f-4cce-9177-a06d4987bb11\\tasks\\ba33mkzbm.output",
       "accessCount": 1,
       "lastAccessed": 1776926208038,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1776995634760,
       "type": "file"
     }
   ],

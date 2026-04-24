@@ -10,7 +10,9 @@
       "Bash(npm run:*)",
       "Bash(npx next:*)",
       "Bash(ls:*)",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('D:\\\\Projects\\\\YulProject_1\\\\4ltree_home\\\\public\\\\weblogo.png'\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('D:\\\\Projects\\\\YulProject_1\\\\4ltree_home\\\\public\\\\weblogo.png'\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "Bash(npx tsc *)",
+      "Bash(echo \"---EXIT=$?---\")"
     ]
   }
 }

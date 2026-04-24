@@ -4,17 +4,17 @@ const SITE_URL = "https://4ltree.com";
 const PAGE_URL = `${SITE_URL}/melodygen`;
 
 export const metadata: Metadata = {
-  title: "MelodyGen — 음악가를 위한 청음 훈련 앱",
+  title: "청음 앱 멜로디젠(MelodyGen) — 음악가를 위한 이어트레이닝(ear training)",
   description:
-    "선율·리듬·음정·화성·조성·2성부 6개 카테고리의 청음 연습과 모의시험, 개인 맞춤 학습 통계를 제공하는 이어트레이닝 앱. 입시 및 실용음악 시창청음 준비에 최적화.",
+    "청음 앱 '멜로디젠(MelodyGen)'은 선율·리듬·음정·화성·조성·2성부 6가지 카테고리의 청음 훈련과 모의시험, 개인 맞춤 학습 통계를 제공하는 이어트레이닝(ear training) 앱입니다. 입시 청음 및 실용음악 시창청음 준비에 최적화되어 있습니다.",
   keywords: [
-    "MelodyGen",
-    "멜로디젠",
     "청음",
     "청음 앱",
     "청음 훈련",
+    "청음 연습",
     "이어트레이닝",
     "ear training",
+    "ear-training",
     "시창청음",
     "입시 청음",
     "음감 훈련",
@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     "화성 청음",
     "조성 청음",
     "2성부 청음",
+    "멜로디젠",
+    "MelodyGen",
+    "청음 앱 추천",
+    "이어트레이닝 앱",
+    "포엘트리",
+    "4LTree",
   ],
   alternates: {
     canonical: "/melodygen",
@@ -32,17 +38,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    siteName: "4LTree",
-    title: "MelodyGen — 음악가를 위한 청음 훈련 앱",
+    siteName: "포엘트리",
+    title: "청음 앱 멜로디젠(MelodyGen) — 음악가를 위한 이어트레이닝",
     description:
-      "6개 카테고리 청음 연습과 모의시험, 학습 통계를 제공하는 이어트레이닝 앱 MelodyGen.",
+      "선율·리듬·음정·화성·조성·2성부 6가지 카테고리의 청음 훈련과 모의시험, 학습 통계를 제공하는 이어트레이닝(ear training) 앱 '멜로디젠(MelodyGen)'.",
     locale: "ko_KR",
     alternateLocale: ["en_US", "ja_JP"],
   },
   twitter: {
     card: "summary",
-    title: "MelodyGen — Ear Training by 4LTree",
-    description: "음악가를 위한 청음 훈련 앱. 6개 카테고리 연습과 모의시험 제공.",
+    title: "청음 앱 멜로디젠(MelodyGen) — Ear Training by 포엘트리",
+    description:
+      "음악가를 위한 청음 앱. 6가지 카테고리 청음 훈련과 모의시험, 이어트레이닝(ear training)을 제공합니다.",
   },
 };
 
@@ -50,8 +57,9 @@ const appJsonLd = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   name: "MelodyGen",
+  alternateName: ["멜로디젠", "청음 앱 멜로디젠", "MelodyGen — Ear Training"],
   description:
-    "선율·리듬·음정·화성·조성·2성부 6개 카테고리의 청음 연습과 모의시험, 학습 통계를 제공하는 이어트레이닝 앱.",
+    "선율·리듬·음정·화성·조성·2성부 6가지 카테고리의 청음 훈련과 모의시험, 개인 맞춤 학습 통계를 제공하는 이어트레이닝(ear training) 앱. 입시 청음 및 실용음악 시창청음 준비에 최적화.",
   applicationCategory: "EducationalApplication",
   applicationSubCategory: "MusicApplication",
   operatingSystem: "ANDROID",
@@ -61,6 +69,8 @@ const appJsonLd = {
   installUrl:
     "https://play.google.com/store/apps/details?id=com.melodygen.app",
   inLanguage: ["ko", "en", "ja"],
+  keywords:
+    "청음, 청음 앱, 청음 훈련, 이어트레이닝, ear training, 시창청음, 입시 청음, 음감 훈련, 멜로디젠, MelodyGen",
   offers: [
     {
       "@type": "Offer",
@@ -86,7 +96,8 @@ const appJsonLd = {
   ],
   publisher: {
     "@type": "Organization",
-    name: "4LTree",
+    name: "포엘트리",
+    alternateName: ["4LTree", "4L TREE"],
     url: SITE_URL,
   },
 };
@@ -98,13 +109,13 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "4LTree",
+      name: "포엘트리",
       item: SITE_URL,
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "MelodyGen",
+      name: "청음 앱 멜로디젠(MelodyGen)",
       item: PAGE_URL,
     },
   ],
