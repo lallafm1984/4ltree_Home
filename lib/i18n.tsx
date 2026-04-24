@@ -284,20 +284,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check localStorage first, then browser language
+    // Default to Korean on first visit; only honor a previously saved choice.
     const saved = localStorage.getItem("locale") as Locale | null;
-    if (saved && ["ko", "en", "ja"].includes(saved)) {
-      setLocaleState(saved);
-    } else {
-      const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith("ja")) {
-        setLocaleState("ja");
-      } else if (browserLang.startsWith("ko")) {
-        setLocaleState("ko");
-      } else {
-        setLocaleState("en");
-      }
-    }
+    const initial: Locale = saved && ["ko", "en", "ja"].includes(saved) ? saved : "ko";
+    setLocaleState(initial);
+    document.documentElement.lang = initial;
     setMounted(true);
   }, []);
 

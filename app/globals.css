@@ -29,6 +29,13 @@
 
   .break-keep-all {
     word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  :lang(ja) .break-keep-all {
+    word-break: normal;
+    line-break: auto;
+    overflow-wrap: anywhere;
   }
 
   .surface-card {
