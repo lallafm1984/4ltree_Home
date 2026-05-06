@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useSyncExternalStore,
+} from "react";
 
 export type Locale = "ko" | "en" | "ja";
 
@@ -23,11 +29,11 @@ const translations: Translations = {
   "nav.menuClose": { ko: "메뉴 닫기", en: "Close menu", ja: "メニューを閉じる" },
 
   // Hero
-  "hero.headline1": { ko: "귀를 훈련하면", en: "Train Your Ear,", ja: "耳を鍛えれば" },
+  "hero.headline1": { ko: "청음 훈련으로", en: "Train Your Ear,", ja: "耳を鍛えれば" },
   "hero.headlineHighlight": { ko: "음악이", en: "Music", ja: "音楽が" },
   "hero.headline2": { ko: "달라집니다", en: "Changes", ja: "変わります" },
   "hero.description": {
-    ko: "멜로디 받아쓰기부터 화음 인식까지, 음악가에게 꼭 필요한 6가지 청음 훈련을 매일 꾸준히. 음대 입시생부터 취미 음악가까지 모두를 위한 체계적인 훈련 앱.",
+    ko: "MelodyGen은 멜로디 받아쓰기부터 화음 인식까지, 음악가에게 꼭 필요한 6가지 청음 훈련을 매일 꾸준히 이어갈 수 있게 돕는 청음 앱입니다. 음대 입시생부터 취미 음악가까지 체계적으로 연습하세요.",
     en: "From melody dictation to chord recognition — 6 essential ear training exercises for musicians, every day. A structured training app for everyone from music students to hobbyists.",
     ja: "メロディーの書き取りから和音の認識まで、音楽家に必要な6つの聴音トレーニングを毎日コツコツと。音大受験生から趣味の音楽家まで、すべての人のための体系的なトレーニングアプリ。",
   },
@@ -249,7 +255,7 @@ const translations: Translations = {
     ja: "MelodyGen by 4LTree — 耳を鍛えよう",
   },
   "meta.description": {
-    ko: "멜로디 받아쓰기, 리듬 훈련, 화음 인식 등 6가지 음악 청음 훈련을 제공하는 MelodyGen 앱으로 음악 실력을 키우세요.",
+    ko: "멜로디 받아쓰기, 리듬 훈련, 화음 인식 등 6가지 음악 청음 훈련을 제공하는 청음 앱 MelodyGen으로 음악 실력을 키우세요.",
     en: "Improve your musical skills with MelodyGen — 6 ear training exercises including melody dictation, rhythm training, and chord recognition.",
     ja: "メロディーの書き取り、リズムトレーニング、和音認識など6つの聴音トレーニングを提供するMelodyGenアプリで音楽のスキルを伸ばしましょう。",
   },
@@ -279,23 +285,49 @@ const I18nContext = createContext<I18nContextType>({
   t: (key: string) => key,
 });
 
+const DEFAULT_LOCALE: Locale = "ko";
+const LOCALE_STORAGE_KEY = "locale";
+const LOCALE_CHANGE_EVENT = "localechange";
+
+function isLocale(value: string | null): value is Locale {
+  return value === "ko" || value === "en" || value === "ja";
+}
+
+function getStoredLocale(): Locale {
+  if (typeof window === "undefined") return DEFAULT_LOCALE;
+
+  const saved = window.localStorage.getItem(LOCALE_STORAGE_KEY);
+  return isLocale(saved) ? saved : DEFAULT_LOCALE;
+}
+
+function subscribeLocale(onStoreChange: () => void) {
+  if (typeof window === "undefined") return () => {};
+
+  const handleStoreChange = () => onStoreChange();
+  window.addEventListener("storage", handleStoreChange);
+  window.addEventListener(LOCALE_CHANGE_EVENT, handleStoreChange);
+
+  return () => {
+    window.removeEventListener("storage", handleStoreChange);
+    window.removeEventListener(LOCALE_CHANGE_EVENT, handleStoreChange);
+  };
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("ko");
-  const [mounted, setMounted] = useState(false);
+  const locale = useSyncExternalStore(
+    subscribeLocale,
+    getStoredLocale,
+    () => DEFAULT_LOCALE,
+  );
 
   useEffect(() => {
-    // Default to Korean on first visit; only honor a previously saved choice.
-    const saved = localStorage.getItem("locale") as Locale | null;
-    const initial: Locale = saved && ["ko", "en", "ja"].includes(saved) ? saved : "ko";
-    setLocaleState(initial);
-    document.documentElement.lang = initial;
-    setMounted(true);
-  }, []);
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   const setLocale = useCallback((l: Locale) => {
-    setLocaleState(l);
-    localStorage.setItem("locale", l);
+    localStorage.setItem(LOCALE_STORAGE_KEY, l);
     document.documentElement.lang = l;
+    window.dispatchEvent(new Event(LOCALE_CHANGE_EVENT));
   }, []);
 
   const t = useCallback(
@@ -307,11 +339,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     [locale],
   );
 
-  // Prevent hydration mismatch by rendering with ko until mounted
   const contextValue = {
-    locale: mounted ? locale : "ko",
+    locale,
     setLocale,
-    t: mounted ? t : (key: string) => translations[key]?.ko || key,
+    t,
   };
 
   return <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>;
