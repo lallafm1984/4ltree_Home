@@ -8,7 +8,7 @@ export const metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: "https://4ltree.com/melodygen/terms",
+    url: "https://www.4ltree.com/melodygen/terms",
     siteName: "4LTree",
     title: "이용약관 — MelodyGen",
     description: "MelodyGen 이용약관",

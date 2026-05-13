@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://4ltree.com/melodygen/delete-account",
+    url: "https://www.4ltree.com/melodygen/delete-account",
     siteName: "4LTree",
     title: "계정 및 데이터 삭제 요청 — MelodyGen",
     description: "MelodyGen 계정 및 데이터 삭제 요청 안내",

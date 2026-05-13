@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://4ltree.com";
+const SITE_HOST = "www.4ltree.com";
+const BASE_URL = `https://${SITE_HOST}`;
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -12,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
+    host: SITE_HOST,
   };
 }

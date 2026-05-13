@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://4ltree.com";
-const LAST_MODIFIED = "2026-05-06";
+const BASE_URL = "https://www.4ltree.com";
+const LAST_MODIFIED = "2026-05-13";
 const MELODYGEN_IMAGES = [
   `${BASE_URL}/img/store-slides/feature-graphic.png`,
   `${BASE_URL}/img/kr/main.webp`,

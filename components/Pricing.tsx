@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.melodygen.app";
+
 export function Pricing() {
   const { t } = useI18n();
 
@@ -90,7 +93,9 @@ export function Pricing() {
             </div>
 
             <a
-              href="#"
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold bg-zinc-100 hover:bg-zinc-200 text-zinc-700 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             >
               {t("pricing.free.cta")}
@@ -139,7 +144,9 @@ export function Pricing() {
             </div>
 
             <a
-              href="#"
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold bg-white text-[#5AA63C] hover:bg-zinc-50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg"
             >
               {t("pricing.pro.cta")}

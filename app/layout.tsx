@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ClientProvider } from "@/components/ClientProvider";
 
-const SITE_URL = "https://4ltree.com";
+const SITE_URL = "https://www.4ltree.com";
 const SITE_NAME = "포엘트리";
 const SITE_NAME_EN = "4LTree";
 
