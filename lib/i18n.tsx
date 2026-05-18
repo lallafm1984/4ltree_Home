@@ -150,7 +150,7 @@ const translations: Translations = {
 
   "pricing.pro.title": { ko: "Pro", en: "Pro", ja: "Pro" },
   "pricing.pro.desc": { ko: "진지하게 청음 실력을 키우려는 분께", en: "For those serious about improving ear skills", ja: "本格的に聴音スキルを伸ばしたい方へ" },
-  "pricing.pro.price": { ko: "₩5,500", en: "$4.99", ja: "¥700" },
+  "pricing.pro.price": { ko: "₩1,500", en: "$0.99", ja: "¥170" },
   "pricing.pro.priceSub": { ko: "월 / 구독", en: "/ month", ja: "月額" },
   "pricing.pro.cta": { ko: "Pro 시작하기", en: "Start Pro", ja: "Proを始める" },
   "pricing.pro.recommended": { ko: "추천 플랜", en: "Recommended", ja: "おすすめ" },
